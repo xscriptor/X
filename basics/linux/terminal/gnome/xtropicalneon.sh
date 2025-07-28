@@ -14,7 +14,7 @@ gsettings set org.gnome.Terminal.ProfilesList list "$NEW_LIST"
 # New profile
 PROFILE_PATH="org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$NEW_UUID/"
 
-# Aplicar the palette
+# Apply the palette
 gsettings set $PROFILE_PATH visible-name 'xtropicalneon'
 gsettings set $PROFILE_PATH use-theme-colors false
 gsettings set $PROFILE_PATH background-color '#000000'
