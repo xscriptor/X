@@ -24,13 +24,22 @@ add_alias() {
 }
 
 echo "Adding aliases to $RC_FILE..."
-
+echo "general aliases"
 add_alias 'alias gc="git clone"'
 add_alias 'alias ga="git add ."'
 add_alias 'alias gcom="git commit -m"'
 add_alias 'alias gp="git push"'
 add_alias 'alias gpuom="git push -u origin main"'
 add_alias 'alias gpuod="git push -u origin dev"'
+echo "Habitual job"
+add_alias 'alias gs="git status"'
+add_alias 'alias gl="git log --online --graph --decorate"'
+add_alias 'alias gco="git checkout"'
+add_alias 'alias gcb="git checkout -b"'
+add_alias 'alias gd="git diff"'
+echo "pull and fecth"
+add_alias 'alias gpl="git pull"'
+add_alias 'alias gf="git fetch"'
 
 # Reload only if Bash; otherwise, notify user
 if [[ $RC_FILE == "$HOME/.bashrc" ]]; then
