@@ -20,7 +20,7 @@ gsettings set $PROFILE_PATH use-theme-colors false
 gsettings set $PROFILE_PATH background-color '#000000'
 gsettings set $PROFILE_PATH foreground-color '#ffffff'
 gsettings set $PROFILE_PATH use-transparent-background true
-gsettings set $PROFILE_PATH background-transparency-percent 15  # 0 = opaco, 100 = totalmente transparente
+gsettings set $PROFILE_PATH background-transparency-percent 15
 gsettings set $PROFILE_PATH palette "['#000000', '#ff5151', '#00ff87', '#ffe600', '#00b7ff', '#d99dff', '#00ffd1', '#ffffff', '#111111', '#ff8787', '#50fa7b', '#ffffa5', '#79d9ff', '#ff00a8', '#41b3ff', '#ffffff']"
 
 # As default
