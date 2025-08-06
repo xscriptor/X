@@ -107,7 +107,7 @@ widgets:
     options:
       label: "<span>{icon}</span> {temp}"
       label_alt: "<span>{icon}</span> {location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-      api_key: '24b6c2cda6d84066b0304531241908'
+      api_key: '24b6c2cda6d84066b03**************' #this is just an example, your api key here
       update_interval: 600 #Update interval in seconds, Min 600
       hide_decimal: true
       location: 'USA Los Angeles 90006'
