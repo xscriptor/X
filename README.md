@@ -11,10 +11,10 @@ Art
 |
 |->basics //choose your system
 |   |
-|   |->linux //concentration of stylizations for Linux
+|   |->linux //concentration of customization for Linux
 |   |   |_ Environment: Look&Feel, terminals, tools, desktop, extensions etc.
 |   |
-|   |->windows //concentration of stylizations for Windows
+|   |->windows //concentration of customization for Windows
 |        |_ Environment: Look&Feel, terminal, tools, post installation,
 |
 |->general // Changes to applications or interfaces present in any system
