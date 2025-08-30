@@ -1,0 +1,44 @@
+{
+  "name": "xscriptor-themes",
+  "displayName": "Xscriptor Themes",
+  "description": "Collection of themes for Visual Studio Code by Xscriptor.",
+  "version": "0.0.3",
+  "publisher": "xscriptor",
+  "license": "MIT",
+  "engines": { "vscode": "^1.70.0" },
+  "extensionKind": ["ui"],
+  "categories": ["Themes"],
+  "keywords": ["theme", "dark", "light", "xscriptor", "colors"],
+  "icon": "image/icon.png",
+  "galleryBanner": { "color": "#0D1117", "theme": "dark" },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xscriptorcode/X",
+    "directory": "vscodethemes/xdarkcolors"
+  },
+  "bugs": { "url": "https://github.com/xscriptorcode/X/issues" },
+  "homepage": "https://github.com/xscriptorcode/X/tree/main/vscodethemes/xdarkcolors",
+
+  "contributes": {
+    "themes": [
+      { "label": "X Dark Colors",        "uiTheme": "vs-dark",  "path": "./themes/xdarkcolors.json" },
+      { "label": "X Plain Text",         "uiTheme": "vs-dark",  "path": "./themes/xplaintext.json" },
+      { "label": "X Tropical Neon",      "uiTheme": "vs-dark",  "path": "./themes/xtropicalneon.json" },
+      { "label": "X Greyscale",          "uiTheme": "vs-dark",  "path": "./themes/xgreyscale.json" },
+      { "label": "X Greyscale Inverted", "uiTheme": "vs-light", "path": "./themes/xgreyscaleinverted.json" },
+      { "label": "X Nord",               "uiTheme": "vs-dark",  "path": "./themes/xnord.json" },
+      { "label": "X Nord Inverted",      "uiTheme": "vs-light", "path": "./themes/xnordinverted.json" },
+      { "label": "X Summer Night",       "uiTheme": "vs-dark",  "path": "./themes/xsummernight.json" },
+      { "label": "X Summer Day",         "uiTheme": "vs-light", "path": "./themes/xsummerday.json" },
+      { "label": "X Old Tropical Neon",            "uiTheme": "vs-dark",  "path": "./themes/xoldtropicalneon.json" }
+    ]
+  },
+
+  "files": [
+    "themes/*.json",
+    "image/icon.png",
+    "README.md",
+    "LICENSE"
+  ]
+}
