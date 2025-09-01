@@ -1,4 +1,4 @@
-# X Theme
+# Xscriptor Theme
 
 An elegant Obsidian theme for coders and writers with beautiful typography, and comprehensive customization options.
 
@@ -68,3 +68,4 @@ MIT License - Feel free to modify and distribute
 ---
 
 **Created by Xscriptor** | [Report Issues](https://github.com/xscriptorcode/X/issues)
+**To download from the source** | [View on GitHub](https://github.com/xscriptorcode/X/tree/main/general/obsidian/themes/xscriptor-theme)
