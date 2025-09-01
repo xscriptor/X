@@ -37,9 +37,9 @@ An elegant Obsidian theme for coders and writers with beautiful typography, and 
 
 1. Download the theme files
 2. Place `theme.css` in your Obsidian themes folder:
-   - **Windows**: `%APPDATA%\Obsidian\themes\X-Theme\`
-   - **macOS**: `~/Library/Application Support/obsidian/themes/X-Theme/`
-   - **Linux**: `~/.config/obsidian/themes/X-Theme/`
+   - **Windows**: `%APPDATA%\Obsidian\themes\Xscriptor-Theme\`
+   - **macOS**: `~/Library/Application Support/obsidian/themes/Xscriptor-Theme/`
+   - **Linux**: `~/.config/obsidian/themes/Xscriptor-Theme/`
 3. Enable the theme in Settings → Appearance → Themes
 4. Install the "Style Settings" plugin for full customization access
 
