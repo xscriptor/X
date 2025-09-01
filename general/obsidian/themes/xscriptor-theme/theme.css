@@ -1200,7 +1200,7 @@ body:not(.folder-colors) .nav-files-container {
   /* File navigation improvements */
   & .nav-file-title {
     color: var(--text-muted);
-    transition: color 0.5s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
   }
   
   & .nav-file-title:hover {
@@ -1831,7 +1831,7 @@ a:hover {
   color: var(--text-normal);
   padding: 4px 8px;
   border-radius: 4px;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.2s ease;
 }
 
 .nav-folder-title:hover {
@@ -1842,7 +1842,7 @@ a:hover {
   color: var(--text-muted);
   padding: 2px 8px;
   border-radius: 4px;
-  transition: all 0.5s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-file-title:hover {
@@ -1870,7 +1870,7 @@ a:hover {
   text-decoration: none;
   padding: 4px 8px;
   border-radius: 4px;
-  transition: all 0.5s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .breadcrumb-item:hover {
@@ -1893,7 +1893,7 @@ a:hover {
   font-family: inherit;
   font-size: 0.9em;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .mod-cta:hover, button:hover {
@@ -1925,7 +1925,7 @@ input, textarea, select {
   border-radius: 4px;
   padding: 8px 12px;
   font-family: inherit;
-  transition: all 0.5s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -2083,10 +2083,8 @@ tr:nth-child(even) {
   background-color: var(--background-primary-alt);
 }
 
-/* Animaciones suaves */
-* {
-  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
-}
+/* Animaciones suaves - aplicadas solo a elementos específicos */
+/* Removido el selector universal (*) que causaba problemas de movimiento en el explorador de archivos */
 
 
 /* === 1) Fondo y texto sólidos para code/blocks === */
