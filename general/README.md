@@ -12,6 +12,10 @@ This section of the repository concentrates on aspects of personalization for ap
     - **Vscode & Forks:**
         - [Xscriptor Themes](./vscodethemes/xscriptor-themes/README.md)
         - Xscriptor DarkColors
+    - **Kitty:**
+        - [Xtropical Neon for Kitty](./kitty/themes/xtropicalneon/)
+        - [XDrakula](./kitty/themes/xdracula/)
+
 
 *Linux Only:*
-    - Kitty
+    
