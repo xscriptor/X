@@ -1,20 +1,22 @@
 #!/bin/bash
 
 echo "Installing system monitors..."
-sudo apt update
+if command -v dpkg &> /dev/null; then
+    echo "apt updating..."
+    sudo apt update
+    echo "Installing monirotization tools..."
+    sudo apt install -y btop nvtop nethogs
+    echo "Installation complete."
+    echo "To run just use btop and nvtop from terminal."
 
-# Install all selected tools
-sudo apt install -y btop iotop nethogs powertop nvtop gnome-terminal
+elif command -v pacman &> /dev/null; then
+    echo "pacman updating"
+    sudo pacman -Syu
+    echo "Installing monirotization tools..."
+    sudo pacman -S --noconfirm btop nvtop nethogs
+    echo "Installation complete."
+    echo "To run just use btop and nvtop from terminal."
 
-echo "Installation complete."
-
-# Launch each monitor in its own terminal window
-echo "Launching monitors in separate terminals..."
-
-gnome-terminal -- bash -c "echo 'Launching btop (system overview)...'; btop"
-gnome-terminal -- bash -c "echo 'Launching iotop (disk I/O)...'; sudo iotop"
-gnome-terminal -- bash -c "echo 'Launching nethogs (network usage)...'; sudo nethogs"
-gnome-terminal -- bash -c "echo 'Launching powertop (power analysis)...'; sudo powertop"
-gnome-terminal -- bash -c "echo 'Launching nvtop (GPU monitor)...'; nvtop"
-
-echo "All monitors launched."
+else
+    echo "The sistem dosnt support pacman or apt..."
+fi

@@ -1,49 +1,8 @@
 # Monitorization
 
-Here you will find a list of T-UI resources to look whats is happening on your system
-
-
-* htop(recomended):
-
-```bash
-sudo apt install htop -y
-```
-
-* nvtop(recomended to check the gpu):
-
-```bash
-sudo apt install nvtop -y
-```
-
-
-### Full-System Monitors (Overview of CPU, RAM, I/O, etc.)
-
-* htop	Interactive process viewer, more advanced than top.
-* glances	Cross-platform system monitor with real-time info on CPU, RAM, disk, etc.
-* atop	Advanced monitor with historical logging of system resource usage.
-* btop	Modern and colorful TUI monitor for CPU, memory, disks, and processes.
-* nmon	Comprehensive performance monitor for CPU, memory, disks, network, etc
-
 ---
 
-### I/O and Disk Usage Monitors
-
-* iotop	Shows real-time disk I/O usage by processes (root needed).
-* dstat	Combines vmstat, iostat, netstat. Extensible and scriptable.
-* iostat	From sysstat, shows CPU and I/O statistics.
-
----
-
-### Network Monitors
-
-* iftop	Shows bandwidth usage between local and remote hosts.
-* iptraf	Real-time IP LAN monitor, shows traffic per connection.
-* nethogs	Network monitor that groups usage by process.
-
-
-### Power and Frequency Monitors
-* powertop	Monitor power usage and power-saving suggestions.
-* cpufrequtils	Shows and sets CPU frequency scaling governors.
+## Personal monitorization tools:
 
 - To Install the recomended personal selection:
 - 1. Just click on [moninstall.sh](./moninstall.sh) download the script
@@ -62,25 +21,50 @@ or copy the script:
 #!/bin/bash
 
 echo "Installing system monitors..."
-sudo apt update
+if command -v dpkg &> /dev/null; then
+    echo "apt updating..."
+    sudo apt update
+    echo "Installing monirotization tools..."
+    sudo apt install -y btop nvtop nethogs
+    echo "Installation complete."
+    echo "To run just use btop and nvtop from terminal."
 
-# Install all selected tools
-sudo apt install -y btop iotop nethogs powertop nvtop gnome-terminal
+elif command -v pacman &> /dev/null; then
+    echo "pacman updating"
+    sudo pacman -Syu
+    echo "Installing monirotization tools..."
+    sudo pacman -S --noconfirm btop nvtop nethogs
+    echo "Installation complete."
+    echo "To run just use btop and nvtop from terminal."
 
-echo "Installation complete."
-
-# Launch each monitor in its own terminal window
-echo "Launching monitors in separate terminals..."
-
-gnome-terminal -- bash -c "echo 'Launching btop (system overview)...'; btop"
-gnome-terminal -- bash -c "echo 'Launching iotop (disk I/O)...'; sudo iotop"
-gnome-terminal -- bash -c "echo 'Launching nethogs (network usage)...'; sudo nethogs"
-gnome-terminal -- bash -c "echo 'Launching powertop (power analysis)...'; sudo powertop"
-gnome-terminal -- bash -c "echo 'Launching nvtop (GPU monitor)...'; nvtop"
-
-echo "All monitors launched."
+else
+    echo "The sistem dosnt support pacman or apt..."
+fi
 
 
 ```
 
 </details>
+
+---
+
+## Other monitors:
+
+### Full-System Monitors (Overview of CPU, RAM, I/O, etc.)
+
+* htop	Interactive process viewer, more advanced than top.
+* glances	Cross-platform system monitor with real-time info on CPU, RAM, disk, etc.
+* atop	Advanced monitor with historical logging of system resource usage.
+* btop	Modern and colorful TUI monitor for CPU, memory, disks, and processes.
+* nmon	Comprehensive performance monitor for CPU, memory, disks, network, etc
+
+---
+
+### Network Monitors
+
+* iftop	Shows bandwidth usage between local and remote hosts.
+* iptraf	Real-time IP LAN monitor, shows traffic per connection.
+* nethogs	Network monitor that groups usage by process.
+
+
+
