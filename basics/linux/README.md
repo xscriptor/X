@@ -1,13 +1,13 @@
-# Linux Customization Cluster
+# Linux Setup Cluster
 
-A collection of scripts and configurations to customize and enhance your Linux desktop experience.
+A collection of scripts and configurations to automate the setup of a Linux desktop environment.
 
-## Tested on *based on the package manager*:
-- EndeavourOs
-- Arch
-- Ubuntu  
-- Kali Linux  
+## Tested on (based on package manager):
+- EndeavourOS
+- Arch Linux
+- Ubuntu
+- Kali Linux
 - Debian
 
-### Note:
-The directory structure or behavior may vary slightly depending on your distribution.
+### Note
+Directory structure and behavior may vary slightly depending on the distribution.

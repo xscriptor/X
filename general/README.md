@@ -6,7 +6,7 @@ This section of the repository concentrates on aspects of personalization for ap
 
 **Current Content:**
 
-- *Linux & Windows:*
+- *Linux & Windows*:
     - **Obsidian:**
         - [Xscriptor Theme](./obsidian/themes/xscriptor-theme/README.md)
     - **Vscode & Forks:**
@@ -16,6 +16,13 @@ This section of the repository concentrates on aspects of personalization for ap
         - [Xtropical Neon for Kitty](./kitty/themes/xtropicalneon/README.md)
         - [XDrakula](./kitty/themes/xdracula/)
 
+---
 
-*Linux Only:*
-    
+- Only *Windows*:
+    - **Gnome Terminal:**
+        - [Xtropicalneon for Gnome](./gnome-terminal/xtropicalneon/README.md)
+
+---
+
+- Only *Windows*:
+    - Powershell:
