@@ -1,5 +1,10 @@
 # Xtropicalneon for Powershell
 
+## Preview:
+
+![Demostration](./preview.png)
+---
+
 ## Instructions:
 1. Add this under "schemes": [ ... ] in your settings.json:
 
@@ -40,7 +45,7 @@
 2. Inside "profiles": { "list": [ ... ] } add or edit your PowerShell profile like this:
 
 <details>
-<summary>schemes</summary>
+<summary>profiles</summary>
 
 ```json
 {

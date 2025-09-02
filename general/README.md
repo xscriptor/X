@@ -26,3 +26,4 @@ This section of the repository concentrates on aspects of personalization for ap
 
 - Only *Windows*:
     - Powershell:
+        - [Xtropicalneon](./powershell/themes/README.md)
