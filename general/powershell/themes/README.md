@@ -3,4 +3,4 @@
 ---
 
 - **Themes**:
-    - [xtropicalneon](./xtropicalneon/xtropicalneon.json)
+    - [xtropicalneon](./xtropicalneon/README.md)

@@ -1,6 +1,6 @@
 # General
 
-This section of the repository concentrates on aspects of personalization for application interfaces that I use on **Windows** and **Linux**.
+This section of the repository concentrates on aspects of customization for application interfaces that I use on **Windows** and **Linux**.
 
 ---
 
@@ -18,7 +18,7 @@ This section of the repository concentrates on aspects of personalization for ap
 
 ---
 
-- Only *Windows*:
+- Only *Linux*:
     - **Gnome Terminal:**
         - [Xtropicalneon for Gnome](./gnome-terminal/xtropicalneon/README.md)
 
