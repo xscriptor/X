@@ -1,10 +1,22 @@
 # X Themes Collection — Visual Studio Code Theme Pack
 
-A comprehensive collection of 10 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
+A comprehensive collection of 12 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
 
 ## Preview
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc01.jpg" width="900"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc03.jpg" width="900"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc02.jpg" width="900"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc05.jpg" width="900"/>
+</p>
 
-![Theme Preview](https://raw.githubusercontent.com/xscriptorcode/X/main/general/vscodethemes/xscriptor-themes/screenshots/preview.jpg)
+
 
 ---
 
@@ -97,7 +109,7 @@ A comprehensive collection of 10 carefully crafted themes for Visual Studio Code
 
 ### Method 1: From Terminal
 ```bash
-code --install-extension xscriptor-themes-0.0.3.vsix
+code --install-extension xscriptor-themes-0.0.4.vsix
 ```
 
 ### Method 2: Manual Installation
@@ -169,7 +181,7 @@ This theme collection is released under the MIT License. See [LICENSE](./LICENSE
 **Xscriptor** — Theme Designer & Developer
 
 - GitHub: [@xscriptorcode](https://github.com/xscriptorcode)
-- Repository: [X Themes Collection](https://github.com/xscriptorcode/X/tree/main/vscodethemes/xdarkcolors)
+- Repository: [X Themes Collection](https://github.com/xscriptorcode/X/tree/main/general/vscode/themes/xscriptor-themes)
 
 ---
 
