@@ -3,8 +3,20 @@
 A comprehensive collection of 10 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
 
 ## Preview
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc01.jpg" width="900"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc03.jpg" width="900"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc02.jpg" width="900"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc05.jpg" width="900"/>
+</p>
 
-![Theme Preview](https://raw.githubusercontent.com/xscriptorcode/X/main/general/vscodethemes/xscriptor-themes/screenshots/preview.jpg)
+
 
 ---
 
