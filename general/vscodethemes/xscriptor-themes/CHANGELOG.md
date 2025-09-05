@@ -4,6 +4,12 @@ All important modifications to this VSCode theme collection will be documented i
 
 ---
 
+## [0.0.4] - 2025-09-05
+- **Add Xscriptor Theme**
+  - Ultra-dark background (#131313)
+  - Warm yellow (#FCE566), coral (#FC618D), mint (#7BD88F), sky blue (#5AD4E6)
+  - Enhanced contrast for better readability
+
 ## [0.0.3] – 2025-01-22
 ### Added
 - **8 new themes** added to the collection:

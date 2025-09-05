@@ -2,6 +2,16 @@
 
 A comprehensive collection of 10 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
 
+## Preview
+
+![Theme Preview](https://raw.githubusercontent.com/xscriptorcode/X/main/general/vscodethemes/xscriptor-themes/screenshots/preview.jpg)
+
+---
+
+## Featured Theme: Xscriptor Theme
+
+**Xscriptor Theme** is the flagship theme of this collection, offering the perfect balance of warmth and darkness for extended coding sessions. With its ultra-dark background and carefully selected warm accent colors, it provides exceptional readability while maintaining visual appeal.
+
 ---
 
 ## Theme Collection
@@ -25,6 +35,17 @@ A comprehensive collection of 10 carefully crafted themes for Visual Studio Code
 - **Background:** Dark gray (#1A1A1A)
 - **Highlights:** Electric cyan (#7FFFD4), gold (#FFD700), hot pink (#FF1493), neon colors
 - **Perfect for:** Creative coding and modern development
+
+**Xscriptor Theme** — *Main theme - Ultra-dark warm evening palette*
+- **Type:** Dark (Main Theme)
+- **Background:** Ultra-dark charcoal (#0A0A0A) - Enhanced for deeper immersion
+- **Highlights:** Warm yellow (#FCE566), coral (#FC618D), mint (#7BD88F), sky blue (#5AD4E6), purple (#948AE3)
+- **Special Features:** 
+  - Ultra-dark background for maximum comfort during long coding sessions
+  - Carefully balanced warm color palette that reduces eye strain
+  - Enhanced contrast for better code readability
+  - Optimized for all programming languages
+- **Perfect for:** Professional development, evening coding, extended work sessions
 
 **X Summer Night** — *Warm evening palette*
 - **Type:** Dark
@@ -112,7 +133,9 @@ code --install-extension xscriptor-themes-0.0.3.vsix
    - X Dark Colors
    - X Plain Text
    - X Tropical Neon
+   - Xscriptor Theme
    - X Summer Night
+   - X Old Tropical Neon
    - X Nord
    - X Greyscale
    - X Summer Day
@@ -122,11 +145,6 @@ code --install-extension xscriptor-themes-0.0.3.vsix
 
 ---
 
-## Preview
-
-![Theme Preview](https://raw.githubusercontent.com/xscriptorcode/X/main/general/vscodethemes/xscriptor-themes/screenshots/preview.jpg)
-
----
 
 ## Changelog
 
