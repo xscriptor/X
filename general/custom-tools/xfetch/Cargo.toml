@@ -1,0 +1,24 @@
+[package]
+name = "xfetch"
+version = "0.1.0"
+edition = "2024"
+authors = ["xscriptor"]
+description = "A system information tool on Rust"
+license = "MIT"
+
+[[bin]]
+name = "xfetch"
+path = "src/main.rs"
+
+[dependencies]
+sysinfo = "0.30"
+colored = "2.0"
+chrono = { version = "0.4", features = ["serde"] }
+regex = "1.10"
+termcolor = "1.4"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "sysinfoapi", "processthreadsapi"] }
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
