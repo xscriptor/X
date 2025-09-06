@@ -80,7 +80,6 @@ else
     echo "Creating new Kitty configuration..."
     cat > "$KITTY_CONF" << EOF
 # Kitty configuration with Xscriptor theme
-# Auto-generated
 
 # Include Xscriptor theme
 include x-theme-kitty.conf
