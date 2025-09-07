@@ -11,19 +11,7 @@ This section of the repository concentrates on aspects of customization for appl
         - [Xscriptor Theme](./obsidian/themes/xscriptor-theme/README.md)
     - **Vscode & Forks:**
         - [Xscriptor Themes](./vscode/themes/xscriptor-themes/README.md)
-        - Xscriptor DarkColors
-    - **Kitty:**
-        - [Xtropical Neon for Kitty](./kitty/themes/xtropicalneon/README.md)
-        - [XDrakula](./kitty/themes/xdracula/)
+        - [Xscriptor DarkColors VSX Extension](./vscode/themes/xscriptor-themes/files-before-rename/xdarkcolors-0.0.3.vsix)
 
----
 
-- Only *Linux*:
-    - **Gnome Terminal:**
-        - [Xtropicalneon for Gnome](./gnome-terminal/xtropicalneon/README.md)
-
----
-
-- Only *Windows*:
-    - Powershell:
-        - [Xtropicalneon](./powershell/themes/README.md)
+- Experimental: development folder before include files in the repository.
