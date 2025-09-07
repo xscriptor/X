@@ -2,7 +2,11 @@
 
 A modern and elegant dark theme for Kitty Terminal with carefully selected colors for optimal readability and visual appeal.
 
-## Installation
+<p align="center">
+  <img src="./preview.png" alt="Demostración" width="600"/>
+</p>
+
+## Installation:
 
 ### Automatic Installation
 
