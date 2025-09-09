@@ -11,8 +11,8 @@ This section of the repository concentrates on aspects of customization for Term
 
 
 - Any So:
-    - **Kitty:**
-        - [Xscriptor Theme for kitty](./kitty/xsccriptor-theme/README.md)
+    - **Kitty**:
+        - [Xscriptor Theme for kitty](./kitty/xscriptor-theme/README.md)
         - [Xtropical Neon for Kitty](./kitty/themes/xtropicalneon/README.md)
         - [XDrakula](./kitty/xdracula/README.md)
         
