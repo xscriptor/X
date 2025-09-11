@@ -28,7 +28,26 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
 
 ## Theme Collection
 
+### Icons: Xscriptor Icons
+
+**Xscriptor Icons** is the icon theme accompanying the Xscriptor Themes collection (Better contrast with Xscriptor Theme). It features a set of carefully designed icons that enhance the visual appeal of your code editor.
+
+**Xscriptor Greyscale Icons** is the greyscale version of the Xscriptor Icons theme. It features a set of icons that have a higher contrast ratio with the Xscriptor Theme, making them easier to see and read.
+
 ### Dark Themes
+
+**Xscriptor Theme** — *Main theme - Ultra-dark warm evening palette*
+- **Type:** Dark (Main Theme)
+- **Background:** Ultra-dark charcoal (#0A0A0A) - Enhanced for deeper immersion
+- **Highlights:** Warm yellow (#FCE566), coral (#FC618D), mint (#7BD88F), sky blue (#5AD4E6), purple (#948AE3)
+- **Special Features:** 
+  - Ultra-dark background for maximum comfort during long coding sessions
+  - Carefully balanced warm color palette that reduces eye strain
+  - Enhanced contrast for better code readability
+  - Optimized for all programming languages
+- **Perfect for:** Professional development, evening coding, extended work sessions
+
+---
 
 **X Dark Colors** — *Minimalist dark with colored accents*
 - **Type:** Dark
@@ -47,17 +66,6 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
 - **Background:** Dark gray (#1A1A1A)
 - **Highlights:** Electric cyan (#7FFFD4), gold (#FFD700), hot pink (#FF1493), neon colors
 - **Perfect for:** Creative coding and modern development
-
-**Xscriptor Theme** — *Main theme - Ultra-dark warm evening palette*
-- **Type:** Dark (Main Theme)
-- **Background:** Ultra-dark charcoal (#0A0A0A) - Enhanced for deeper immersion
-- **Highlights:** Warm yellow (#FCE566), coral (#FC618D), mint (#7BD88F), sky blue (#5AD4E6), purple (#948AE3)
-- **Special Features:** 
-  - Ultra-dark background for maximum comfort during long coding sessions
-  - Carefully balanced warm color palette that reduces eye strain
-  - Enhanced contrast for better code readability
-  - Optimized for all programming languages
-- **Perfect for:** Professional development, evening coding, extended work sessions
 
 **X Summer Night** — *Warm evening palette*
 - **Type:** Dark
@@ -109,7 +117,7 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
 
 ### Method 1: From Terminal
 ```bash
-code --install-extension xscriptor-themes-0.0.5.vsix
+code --install-extension xscriptor-themes-0.0.6.vsix
 ```
 
 ### Method 2: Manual Installation

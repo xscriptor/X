@@ -1,0 +1,232 @@
+{
+  "iconDefinitions": {
+    "file": {
+      "iconPath": "./xscriptor-icons/file.svg"
+    },
+    "folder": {
+      "iconPath": "./xscriptor-icons/folder.svg"
+    },
+    "jsx": {
+      "iconPath": "./xscriptor-icons/jsx.svg"
+    },
+    "tsx": {
+      "iconPath": "./xscriptor-icons/tsx.svg"
+    },
+    "mdx": {
+      "iconPath": "./xscriptor-icons/mdx.svg"
+    },
+    "js": {
+      "iconPath": "./xscriptor-icons/js.svg"
+    },
+    "ts": {
+      "iconPath": "./xscriptor-icons/ts.svg"
+    },
+    "css": {
+      "iconPath": "./xscriptor-icons/css.svg"
+    },
+    "html": {
+      "iconPath": "./xscriptor-icons/html.svg"
+    },
+    "json": {
+      "iconPath": "./xscriptor-icons/json.svg"
+    },
+    "python": {
+      "iconPath": "./xscriptor-icons/python.svg"
+    },
+    "markdown": {
+      "iconPath": "./xscriptor-icons/markdown.svg"
+    },
+    "image": {
+      "iconPath": "./xscriptor-icons/image.svg"
+    },
+    "php": {
+      "iconPath": "./xscriptor-icons/php.svg"
+    },
+    "java": {
+      "iconPath": "./xscriptor-icons/java.svg"
+    },
+    "c": {
+      "iconPath": "./xscriptor-icons/c.svg"
+    },
+    "cpp": {
+      "iconPath": "./xscriptor-icons/cpp.svg"
+    },
+    "go": {
+      "iconPath": "./xscriptor-icons/go.svg"
+    },
+    "rust": {
+      "iconPath": "./xscriptor-icons/rust.svg"
+    },
+    "ruby": {
+      "iconPath": "./xscriptor-icons/ruby.svg"
+    },
+    "elixir": {
+      "iconPath": "./xscriptor-icons/elixir.svg"
+    },
+    "csharp": {
+      "iconPath": "./xscriptor-icons/csharp.svg"
+    },
+    "kotlin": {
+      "iconPath": "./xscriptor-icons/kotlin.svg"
+    },
+    "swift": {
+      "iconPath": "./xscriptor-icons/swift.svg"
+    },
+    "sql": {
+      "iconPath": "./xscriptor-icons/sql.svg"
+    },
+    "bash": {
+      "iconPath": "./xscriptor-icons/bash.svg"
+    },
+    "dart": {
+      "iconPath": "./xscriptor-icons/dart.svg"
+    },
+    "scala": {
+      "iconPath": "./xscriptor-icons/scala.svg"
+    },
+    "perl": {
+      "iconPath": "./xscriptor-icons/perl.svg"
+    },
+    "objectivec": {
+      "iconPath": "./xscriptor-icons/objectivec.svg"
+    },
+    "r": {
+      "iconPath": "./xscriptor-icons/r.svg"
+    },
+    "matlab": {
+      "iconPath": "./xscriptor-icons/matlab.svg"
+    },
+    "haskell": {
+      "iconPath": "./xscriptor-icons/haskell.svg"
+    },
+    "terminal": {
+      "iconPath": "./xscriptor-icons/terminal.svg"
+    },
+    "yaml": {
+      "iconPath": "./xscriptor-icons/yaml.svg"
+    },
+    "docker": {
+      "iconPath": "./xscriptor-icons/docker.svg"
+    },
+    "powershell": {
+      "iconPath": "./xscriptor-icons/powershell.svg"
+    },
+    "lua": {
+      "iconPath": "./xscriptor-icons/lua.svg"
+    },
+    "cobol": {
+      "iconPath": "./xscriptor-icons/cobol.svg"
+    },
+    "conf": {
+      "iconPath": "./xscriptor-icons/conf.svg"
+    }
+  },
+  "file": "file",
+  "folder": "folder",
+  "fileExtensions": {
+    "jsx": "jsx",
+    "tsx": "tsx",
+    "mdx": "mdx",
+    "js": "js",
+    "ts": "ts",
+    "css": "css",
+    "html": "html",
+    "htm": "html",
+    "json": "json",
+    "py": "python",
+    "md": "markdown",
+    "markdown": "markdown",
+    "png": "image",
+    "jpg": "image",
+    "jpeg": "image",
+    "gif": "image",
+    "svg": "image",
+    "webp": "image",
+    "bmp": "image",
+    "ico": "image",
+    "php": "php",
+    "java": "java",
+    "c": "c",
+    "cpp": "cpp",
+    "cc": "cpp",
+    "cxx": "cpp",
+    "h": "c",
+    "hpp": "cpp",
+    "go": "go",
+    "rs": "rust",
+    "rb": "ruby",
+    "tiff": "image",
+    "tif": "image",
+    "raw": "image",
+    "psd": "image",
+    "ai": "image",
+    "eps": "image",
+    "pdf": "image",
+    "sketch": "image",
+    "fig": "image",
+    "xd": "image",
+    "heic": "image",
+    "heif": "image",
+    "avif": "image",
+    "cs": "csharp",
+    "kt": "kotlin",
+    "kts": "kotlin",
+    "swift": "swift",
+    "sql": "sql",
+    "sh": "terminal",
+    "bash": "bash",
+    "zsh": "bash",
+    "fish": "bash",
+    "dart": "dart",
+    "scala": "scala",
+    "sc": "scala",
+    "pl": "perl",
+    "pm": "perl",
+    "m": "objectivec",
+    "mm": "objectivec",
+    "r": "r",
+    "R": "r",
+    "mat": "matlab",
+    "hs": "haskell",
+    "lhs": "haskell",
+    "ex": "elixir",
+    "exs": "elixir",
+    "ps1": "terminal",
+    "yml": "json",
+    "yaml": "json",
+    "toml": "json",
+    "ini": "json",
+    "env": "json",
+    "txt": "markdown",
+    "rst": "markdown",
+    "adoc": "markdown",
+    "xml": "json",
+    "csv": "json",
+    "tsv": "json",
+    "jsonl": "json",
+    "yml": "yaml",
+    "yaml": "yaml",
+    "dockerfile": "docker",
+    "ps1": "powershell",
+    "psm1": "powershell",
+    "psd1": "powershell",
+    "lua": "lua",
+    "cob": "cobol",
+    "cbl": "cobol",
+    "conf": "terminal",
+    "config": "terminal",
+    "cfg": "terminal"
+  },
+  "fileNames": {
+    "package.json": "json",
+    "tsconfig.json": "json",
+    "README.md": "markdown",
+    "index.html": "html",
+    "index.js": "js",
+    "index.ts": "ts",
+    "Dockerfile": "docker",
+    "docker-compose.yml": "docker",
+    "docker-compose.yaml": "docker",
+    ".dockerignore": "docker"
+  }
+}
