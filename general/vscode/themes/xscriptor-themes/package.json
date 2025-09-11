@@ -7,8 +7,8 @@
   "license": "MIT",
   "engines": { "vscode": "^1.70.0" },
   "extensionKind": ["ui"],
-  "categories": ["Themes", "Icon Themes"],
-  "keywords": ["theme", "dark", "light", "xscriptor", "colors"],
+  "categories": ["Themes"],
+  "keywords": ["theme", "dark", "light", "xscriptor", "colors", "icons", "greyscale"],
   "icon": "image/icon.png",
   "galleryBanner": { "color": "#0D1117", "theme": "dark" },
 
