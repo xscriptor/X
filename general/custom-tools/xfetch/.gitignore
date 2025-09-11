@@ -1,6 +1,9 @@
 # Rust build artifacts
 /target/
 
+# Test scripts
+test-linux-build.sh
+
 # Cargo lock file (optional - include if you want reproducible builds)
 # Cargo.lock
 

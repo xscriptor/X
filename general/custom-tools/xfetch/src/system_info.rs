@@ -646,7 +646,8 @@ impl SystemInfo {
             .args(["--query-gpu=temperature.gpu", "--format=csv,noheader,nounits"])
             .output()
         {
-            let temp = String::from_utf8_lossy(&output.stdout).trim();
+            let temp_output = String::from_utf8_lossy(&output.stdout);
+            let temp = temp_output.trim();
             if !temp.is_empty() {
                 return format!("{}°C", temp);
             }
@@ -676,7 +677,8 @@ impl SystemInfo {
             .args(["--query-gpu=memory.total", "--format=csv,noheader,nounits"])
             .output()
         {
-            let vram_mb = String::from_utf8_lossy(&output.stdout).trim();
+            let vram_output = String::from_utf8_lossy(&output.stdout);
+            let vram_mb = vram_output.trim();
             if let Ok(vram) = vram_mb.parse::<f64>() {
                 return format!("{:.1} GB", vram / 1024.0);
             }
@@ -763,12 +765,14 @@ impl SystemInfo {
             .args(["/sys/class/power_supply/BAT0/capacity"])
             .output()
         {
-            let capacity = String::from_utf8_lossy(&output.stdout).trim();
+            let capacity_output = String::from_utf8_lossy(&output.stdout);
+            let capacity = capacity_output.trim();
             if let Ok(output) = Command::new("cat")
                 .args(["/sys/class/power_supply/BAT0/status"])
                 .output()
             {
-                let status = String::from_utf8_lossy(&output.stdout).trim();
+                let status_output = String::from_utf8_lossy(&output.stdout);
+                let status = status_output.trim();
                 return format!("{}% ({})", capacity, status);
             }
         }
@@ -821,7 +825,8 @@ impl SystemInfo {
                                 .arg(format!("/sys/class/net/{}/speed", interface))
                                 .output()
                             {
-                                let speed = String::from_utf8_lossy(&speed_output.stdout).trim();
+                                let speed_raw = String::from_utf8_lossy(&speed_output.stdout);
+                                let speed = speed_raw.trim();
                                 if !speed.is_empty() && speed != "Unknown" {
                                     return format!("{} ({} Mbps)", interface, speed);
                                 }
