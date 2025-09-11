@@ -806,6 +806,31 @@ impl SystemInfo {
         }
         #[cfg(not(windows))]
         {
+            // Try to get network interface info on Linux
+            if let Ok(output) = Command::new("ip")
+                .args(["route", "show", "default"])
+                .output()
+            {
+                let result = String::from_utf8_lossy(&output.stdout);
+                if let Some(line) = result.lines().next() {
+                    if let Some(dev_pos) = line.find("dev ") {
+                        let dev_part = &line[dev_pos + 4..];
+                        if let Some(interface) = dev_part.split_whitespace().next() {
+                            // Try to get speed info
+                            if let Ok(speed_output) = Command::new("cat")
+                                .arg(format!("/sys/class/net/{}/speed", interface))
+                                .output()
+                            {
+                                let speed = String::from_utf8_lossy(&speed_output.stdout).trim();
+                                if !speed.is_empty() && speed != "Unknown" {
+                                    return format!("{} ({} Mbps)", interface, speed);
+                                }
+                            }
+                            return interface.to_string();
+                        }
+                    }
+                }
+            }
             "Unknown".to_string()
         }
     }
@@ -928,6 +953,29 @@ impl SystemInfo {
 
     #[cfg(not(windows))]
     fn get_network_usage() -> String {
+        // Try to get network usage from /proc/net/dev on Linux
+        if let Ok(content) = std::fs::read_to_string("/proc/net/dev") {
+            let mut total_rx = 0u64;
+            let mut total_tx = 0u64;
+            
+            for line in content.lines().skip(2) { // Skip header lines
+                let parts: Vec<&str> = line.split_whitespace().collect();
+                if parts.len() >= 10 {
+                    let interface = parts[0].trim_end_matches(':');
+                    // Skip loopback and virtual interfaces
+                    if !interface.starts_with("lo") && !interface.starts_with("docker") && !interface.starts_with("br-") {
+                        if let (Ok(rx), Ok(tx)) = (parts[1].parse::<u64>(), parts[9].parse::<u64>()) {
+                            total_rx += rx;
+                            total_tx += tx;
+                        }
+                    }
+                }
+            }
+            
+            if total_rx > 0 || total_tx > 0 {
+                return format!("RX: {:.2} MB, TX: {:.2} MB", total_rx as f64 / 1_048_576.0, total_tx as f64 / 1_048_576.0);
+            }
+        }
         "N/A".to_string()
     }
 
