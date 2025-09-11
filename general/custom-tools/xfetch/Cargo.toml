@@ -14,11 +14,18 @@ path = "src/main.rs"
 sysinfo = "0.30"
 colored = "2.0"
 chrono = { version = "0.4", features = ["serde"] }
-regex = "1.10"
-termcolor = "1.4"
+regex = "1.0"
+termcolor = "1.2"
+wmi = "0.13"
+netstat2 = "0.9"
+local-ip-address = "0.6"
+public-ip = "0.2"
+mac_address = "1.1"
+clap = { version = "4.0", features = ["derive"] }
 
 [target.'cfg(windows)'.dependencies]
-winapi = { version = "0.3", features = ["winuser", "sysinfoapi", "processthreadsapi"] }
+winapi = { version = "0.3", features = ["winuser", "sysinfoapi", "processthreadsapi", "winnt", "winerror", "handleapi", "memoryapi", "pdh", "setupapi", "devguid"] }
+windows = { version = "0.52", features = ["Win32_System_SystemInformation", "Win32_System_Registry", "Win32_NetworkManagement_IpHelper", "Win32_System_Power", "Win32_Graphics_Gdi", "Win32_UI_Shell"] }
 
 [target.'cfg(unix)'.dependencies]
 libc = "0.2"

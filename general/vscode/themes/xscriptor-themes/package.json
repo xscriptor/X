@@ -2,13 +2,13 @@
   "name": "xscriptor-themes",
   "displayName": "Xscriptor Themes",
   "description": "Collection of themes for Visual Studio Code by Xscriptor.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "xscriptor",
   "license": "MIT",
   "engines": { "vscode": "^1.70.0" },
   "extensionKind": ["ui"],
   "categories": ["Themes"],
-  "keywords": ["theme", "dark", "light", "xscriptor", "colors"],
+  "keywords": ["theme", "dark", "light", "xscriptor", "colors", "icons", "greyscale"],
   "icon": "image/icon.png",
   "galleryBanner": { "color": "#0D1117", "theme": "dark" },
 
@@ -18,10 +18,12 @@
     "directory": "vscodethemes/xdarkcolors"
   },
   "bugs": { "url": "https://github.com/xscriptorcode/X/issues" },
-  "homepage": "https://github.com/xscriptorcode/X/tree/main/vscodethemes/xdarkcolors",
+  "homepage": "https://github.com/xscriptorcode/X/tree/main/general/vscode/themes/xscriptor-themes",
 
   "contributes": {
     "themes": [
+      { "label": "Xscriptor Theme",            "uiTheme": "vs-dark",  "path": "./themes/xscriptor-theme.json" },
+      { "label": "Xscriptor Theme Inverted", "uiTheme": "vs-light", "path": "./themes/xscriptor-theme-inverted.json" },
       { "label": "X Dark Colors",        "uiTheme": "vs-dark",  "path": "./themes/xdarkcolors.json" },
       { "label": "X Plain Text",         "uiTheme": "vs-dark",  "path": "./themes/xplaintext.json" },
       { "label": "X Tropical Neon",      "uiTheme": "vs-dark",  "path": "./themes/xtropicalneon.json" },
@@ -31,13 +33,26 @@
       { "label": "X Nord Inverted",      "uiTheme": "vs-light", "path": "./themes/xnordinverted.json" },
       { "label": "X Summer Night",       "uiTheme": "vs-dark",  "path": "./themes/xsummernight.json" },
       { "label": "X Summer Day",         "uiTheme": "vs-light", "path": "./themes/xsummerday.json" },
-      { "label": "X Old Tropical Neon",            "uiTheme": "vs-dark",  "path": "./themes/xoldtropicalneon.json" },
-      { "label": "Xscriptor Theme",            "uiTheme": "vs-dark",  "path": "./themes/xscriptor-theme.json" }
+      { "label": "X Old Tropical Neon",            "uiTheme": "vs-dark",  "path": "./themes/xoldtropicalneon.json" }      
+    ],
+    "iconThemes": [
+      {
+        "id": "xscriptor-icons",
+        "label": "Xscriptor Icons",
+        "path": "./icons/xscriptor-icons.json"
+      },
+      {
+        "id": "xscriptor-greyscale-icons",
+        "label": "Xscriptor Greyscale Icons",
+        "path": "./icons/xscriptor-greyscale-icons.json"
+      }
     ]
   },
 
   "files": [
     "themes/*.json",
+    "icons/*.svg",
+    "icons/*.json",
     "image/icon.png",
     "README.md",
     "LICENSE"

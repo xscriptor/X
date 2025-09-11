@@ -4,6 +4,11 @@ All important modifications to this VSCode theme collection will be documented i
 
 ---
 
+## [0.0.6] - 2025-09-05
+- Xscriptor theme upgrade, including icons for xscriptor theme and xscriptor greyscale theme.
+- Xscriptor Greyscale theme optimized.
+- Xscriptor Greyscale Inverted theme optimized.
+
 ## [0.0.5] - 2025-09-05
 - Xscriptor theme upgrade.
 
