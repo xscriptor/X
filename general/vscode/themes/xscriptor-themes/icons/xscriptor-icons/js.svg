@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-  <path fill="#fce566" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-  <text x="12" y="14" text-anchor="middle" fill="#f7f1ff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">JS</text>
-  <text x="18" y="8" text-anchor="middle" fill="#fce566" font-family="Arial, sans-serif" font-size="16" font-weight="bold">x</text>
+  <!-- Fondo cuadrado amarillo del logo de JavaScript -->
+  <rect x="4" y="4" width="16" height="16" fill="#f7df1e" rx="2" ry="2"/>
+  <!-- Letra J -->
+  <path d="M10,8v6c0,1.1-0.9,2-2,2c-0.6,0-1.2-0.3-1.6-0.8" stroke="#000000" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Letra S -->
+  <path d="M14,8c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2c-1.1,0-2,0.9-2,2c0,1.1,0.9,2,2,2c0.6,0,1.2-0.3,1.6-0.8" stroke="#000000" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Marca X característica del tema -->
+  <text x="20" y="7" text-anchor="middle" fill="#000000" font-family="Arial, sans-serif" font-size="4" font-weight="bold">x</text>
 </svg>

@@ -7,6 +7,9 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
   <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc01.jpg" width="900"/>
 </p>
 <p align="center">
+  <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc00.jpg" width="900"/>
+</p>
+<p align="center">
   <img src="https://raw.githubusercontent.com/xscriptorcode/X/refs/heads/main/general/vscode/themes/xscriptor-themes/screenshots/xtvsc03.jpg" width="900"/>
 </p>
 <p align="center">
@@ -28,11 +31,15 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
 
 ## Theme Collection
 
-### Icons: Xscriptor Icons
+### Icons
 
-**Xscriptor Icons** is the icon theme accompanying the Xscriptor Themes collection (Better contrast with Xscriptor Theme). It features a set of carefully designed icons that enhance the visual appeal of your code editor.
+**Xscriptor Icons** - The original icon theme with colorful file and folder icons.
 
-**Xscriptor Greyscale Icons** is the greyscale version of the Xscriptor Icons theme. It features a set of icons that have a higher contrast ratio with the Xscriptor Theme, making them easier to see and read.
+**Xscriptor Greyscale Icons** - A grayscale version of the Xscriptor Icons theme for a more subdued look.
+
+**X Icons** - A new icon theme featuring distinctive icons with an 'X' mark in the center. Each icon uses the characteristic color of its corresponding language or file type, providing excellent visual distinction while maintaining a cohesive look.
+
+**X Greyscale Icons** - A grayscale version of the X Icons theme for a more subdued look.
 
 ### Dark Themes
 
@@ -136,7 +143,7 @@ code --install-extension xscriptor-themes-0.0.6.vsix
 
 ## Features
 
-- **10 Unique Themes** — Diverse collection covering all preferences
+- **12 Unique Themes** — Diverse collection covering all preferences
 - **High Contrast** — Optimized for readability and reduced eye strain
 - **Syntax Highlighting** — Comprehensive token coloring for all major languages
 - **UI Consistency** — Carefully designed interface elements

@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-  <path fill="#7bd88f" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-  <text x="12" y="14" text-anchor="middle" fill="#f7f1ff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">JSON</text>
-  <text x="18" y="8" text-anchor="middle" fill="#fce566" font-family="Arial, sans-serif" font-size="8" font-weight="bold">x</text>
+  <!-- Fondo del logo de JSON -->
+  <rect x="4" y="4" width="16" height="16" fill="#fbc02d" rx="2" ry="2"/>
+  <!-- Representación de llaves de JSON -->
+  <path d="M7,8c0,0.6,0.4,1,1,1c0.6,0,1,0.4,1,1v4c0,0.6,0.4,1,1,1" stroke="#000000" stroke-width="1" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M17,8c0,0.6-0.4,1-1,1c-0.6,0-1,0.4-1,1v4c0,0.6-0.4,1-1,1" stroke="#000000" stroke-width="1" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Representación de datos JSON -->
+  <line x1="10" y1="12" x2="14" y2="12" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+  <line x1="10" y1="14" x2="14" y2="14" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+  <line x1="10" y1="10" x2="14" y2="10" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+  <!-- Marca X característica del tema -->
+  <text x="20" y="7" text-anchor="middle" fill="#000000" font-family="Arial, sans-serif" font-size="4" font-weight="bold">x</text>
 </svg>
