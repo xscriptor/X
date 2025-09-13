@@ -3,6 +3,10 @@
 All important modifications to this VSCode theme collection will be documented in this file.
 
 ---
+## [0.0.7] - 2025-09-20
+- Added new **Xscriptor Icons** theme featuring distinctive icons with an 'X' mark in the center
+- Each icon uses the characteristic color of its corresponding language or file type
+- Updated README.md with information about the new icon theme.
 
 ## [0.0.6] - 2025-09-05
 - Xscriptor theme upgrade, including icons for xscriptor theme and xscriptor greyscale theme.
