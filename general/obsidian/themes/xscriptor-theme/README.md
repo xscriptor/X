@@ -4,6 +4,14 @@ An elegant Obsidian theme for coders and writers with beautiful typography, and 
 
 ![Preview](preview.png)
 
+## Instructions:
+   - Download the [zip file](./download/Xscriptor%20Theme.zip) 
+   - Extract
+   - Paste in the .obsidian/themes/ folder inside of your vault
+   - Restart obsidian.
+   - Open Settings, Aparience, Themes and select Xscriptor Theme.
+      - Note: the folder needs to have the same name *Xscriptor Theme*. 
+
 ## Features
 
 - **EB Garamond Typography**: Elegant and readable serif font
