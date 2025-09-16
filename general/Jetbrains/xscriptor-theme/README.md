@@ -4,15 +4,15 @@ A modern dark theme for Android Studio and IntelliJ IDEA featuring a carefully c
 
 ## Preview
 
-![Preview 1](https://raw.githubusercontent.com/xscriptorcode/X/main/general/AndroidStudio/xscriptor-theme/preview/preview.png)
+![Preview 1](./preview/preview.png)
 
-![Preview 2](https://raw.githubusercontent.com/xscriptorcode/X/main/general/AndroidStudio/xscriptor-theme/preview/preview2.png)
+![Preview 2](./preview/preview2.png)
 
 ## Color Palette
 
 The theme is built around a sophisticated dark color scheme:
 
-- **Background**: Deep black (#0a0a0a) with subtle variations
+- **Background**: Deep black with subtle variations
 - **Accent**: Vibrant pink (#fc618d) for highlights and focus elements
 - **Secondary Accent**: Bright cyan (#5ad4e6) for complementary elements
 - **Success**: Fresh green (#7bd88f) for positive states
