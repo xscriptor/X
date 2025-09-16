@@ -8,6 +8,10 @@ A modern dark theme for Android Studio and IntelliJ IDEA featuring a carefully c
 
 ![Preview 2](./preview/preview2.png)
 
+- Notice: the screenshots use the [Atom Material Icons theme](https://github.com/AtomMaterialUI/a-file-icon-idea).  
+  Icons shown in the screenshots are not bundled with this plugin and belong to their respective authors.
+
+
 ## Color Palette
 
 The theme is built around a sophisticated dark color scheme:
@@ -48,7 +52,7 @@ The theme is built around a sophisticated dark color scheme:
 
 ## License
 
-MIT License
+[MIT License](./LICENSE)
 
 ## Contributing
 
