@@ -3,7 +3,14 @@
 All important modifications to this VSCode theme collection will be documented in this file.
 
 ---
-## [0.0.7] - 2025-09-20
+## [0.0.8] - 2025-09-16
+- Update: X Summer Night Is the new Xscriptor Theme without cursive, cursive font added to Xscriptor Theme.
+
+- X Summer Day deleted better you can use Xscriptor Theme Inverted.
+
+- Xscriptor GrayScale Icons update.
+
+## [0.0.7] - 2025-09-10
 - Added new **Xscriptor Icons** theme featuring distinctive icons with an 'X' mark in the center
 - Each icon uses the characteristic color of its corresponding language or file type
 - Updated README.md with information about the new icon theme.
