@@ -1,6 +1,6 @@
 # X Themes Collection — Visual Studio Code Theme Pack
 
-A comprehensive collection of 12 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
+A comprehensive collection of 11 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
 
 ## Preview
 <p align="center">
@@ -66,7 +66,7 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
 - **Type:** Dark
 - **Background:** Pure black (#000000)
 - **Highlights:** Golden yellow (#FFD700) accents on pure white text
-- **Perfect for:** Distraction-free coding and text editing
+- **Perfect for:** Distraction-free reading documentation coding and text editing
 
 **X Tropical Neon** — *Vibrant cyberpunk aesthetics*
 - **Type:** Dark
@@ -100,12 +100,6 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
 
 ### Light Themes
 
-**X Summer Day** — *Bright and energetic*
-- **Type:** Light
-- **Background:** Pure white (#FFFFFF)
-- **Highlights:** Deep blue (#031A99), warm earth tones, bright accents
-- **Perfect for:** Daytime coding with high contrast and clarity
-
 **X Nord Inverted** — *Light Nordic aesthetic*
 - **Type:** Light
 - **Background:** Off-white (#F8FAFE)
@@ -124,7 +118,7 @@ A comprehensive collection of 12 carefully crafted themes for Visual Studio Code
 
 ### Method 1: From Terminal
 ```bash
-code --install-extension xscriptor-themes-0.0.6.vsix
+code --install-extension xscriptor-themes-0.0.8.vsix
 ```
 
 ### Method 2: Manual Installation
@@ -143,7 +137,7 @@ code --install-extension xscriptor-themes-0.0.6.vsix
 
 ## Features
 
-- **12 Unique Themes** — Diverse collection covering all preferences
+- **11 Unique Themes** — Diverse collection covering all preferences
 - **High Contrast** — Optimized for readability and reduced eye strain
 - **Syntax Highlighting** — Comprehensive token coloring for all major languages
 - **UI Consistency** — Carefully designed interface elements

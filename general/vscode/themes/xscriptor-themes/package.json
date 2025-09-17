@@ -2,7 +2,7 @@
   "name": "xscriptor-themes",
   "displayName": "Xscriptor Themes",
   "description": "Collection of themes for Visual Studio Code by Xscriptor.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "xscriptor",
   "license": "MIT",
   "engines": { "vscode": "^1.70.0" },
@@ -32,7 +32,6 @@
       { "label": "X Nord",               "uiTheme": "vs-dark",  "path": "./themes/xnord.json" },
       { "label": "X Nord Inverted",      "uiTheme": "vs-light", "path": "./themes/xnordinverted.json" },
       { "label": "X Summer Night",       "uiTheme": "vs-dark",  "path": "./themes/xsummernight.json" },
-      { "label": "X Summer Day",         "uiTheme": "vs-light", "path": "./themes/xsummerday.json" },
       { "label": "X Old Tropical Neon",            "uiTheme": "vs-dark",  "path": "./themes/xoldtropicalneon.json" }      
     ],
     "iconThemes": [
