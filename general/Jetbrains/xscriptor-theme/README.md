@@ -47,8 +47,17 @@ The theme is built around a sophisticated dark color scheme:
 
 ## Compatibility
 
-- Android Studio 2021.1+
-- IntelliJ IDEA 2021.1+
+- IntelliJ IDEA
+- PyCharm
+- WebStorm
+- PhpStorm
+- RubyMine
+- CLion
+- GoLand
+- DataGrip
+- Rider
+- AppCode
+- Android Studio
 
 ## License
 
