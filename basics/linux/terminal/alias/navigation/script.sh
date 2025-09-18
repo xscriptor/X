@@ -28,7 +28,7 @@ add_block() {
 
 # --- Navigation Aliases ---
 NAVIGATION_ALIASES=$(cat <<'EOF'
-# ===== Custom Navigation Aliases =====
+# ===== XCustom Navigation Aliases =====
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -37,14 +37,12 @@ alias c="clear"
 alias ll="ls -lh"
 alias la="ls -A"
 alias l="ls -CF"
-# ===== End Navigation Aliases =====
+# ===== End =====
 EOF
 )
 
 # Add blocks
 add_block "Custom Navigation Aliases" "$NAVIGATION_ALIASES"
-add_block "Custom Git Aliases" "$GIT_ALIASES"
-add_block "Custom Package Aliases" "$PKG_ALIASES"
 
 # Reload config
 echo "Reloading $RC_FILE..."

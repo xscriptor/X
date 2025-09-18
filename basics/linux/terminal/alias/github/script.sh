@@ -28,7 +28,7 @@ add_block() {
 
 # --- Git Aliases ---
 GIT_ALIASES=$(cat <<'EOF'
-# ===== Custom Git Aliases =====
+# ===== XCustom Git Aliases =====
 alias gc="git clone"
 alias ga="git add ."
 alias gcom="git commit -m"
@@ -42,14 +42,12 @@ alias gcb="git checkout -b"
 alias gd="git diff"
 alias gpl="git pull"
 alias gf="git fetch"
-# ===== End Git Aliases =====
+# ===== End =====
 EOF
 )
 
 # Add blocks
-add_block "Custom Navigation Aliases" "$NAVIGATION_ALIASES"
 add_block "Custom Git Aliases" "$GIT_ALIASES"
-add_block "Custom Package Aliases" "$PKG_ALIASES"
 
 # Reload config
 echo "Reloading $RC_FILE..."
