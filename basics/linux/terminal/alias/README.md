@@ -3,11 +3,11 @@
 ## Definitions to increase the productivity
 
 *   Note:
-    * To install, clone `chmod +x scriptname.sh` and run `./scriptname` or just copy on the terminal or use what you want to use.
+    * To install, clone `chmod +x script.sh` and run `./script` or just copy on the terminal or use what you want to use.
 
-    * Tested only on Bash and Zsh.
+    * For Bash and Zsh.
 
-1. [Github Alias](./githubalias.sh)
+1. [Github Alias](./github/script.sh)
 <details>
 <summary>Aliases list</summary>
 
