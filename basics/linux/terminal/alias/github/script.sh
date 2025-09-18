@@ -1,52 +1,52 @@
 #!/bin/bash
 # githubaliasadd
 
-# Detect current shell
-current_shell=$(ps -p $$ -o comm=)
-
-if [[ $current_shell == "zsh" ]]; then
+# Detect shell
+if [[ $SHELL == */zsh ]]; then
   RC_FILE="$HOME/.zshrc"
-elif [[ $current_shell == "bash" ]]; then
+elif [[ $SHELL == */bash ]]; then
   RC_FILE="$HOME/.bashrc"
 else
-  echo "Unsupported shell: $current_shell"
+  echo "Unsupported shell: $SHELL"
   echo "This script only supports Bash or Zsh."
   exit 1
 fi
 
-# Aliases block
-ALIASES_BLOCK=$(cat <<'EOF'
-# ---- Custom Git Aliases ----
-alias gc="git clone"
-alias ga="git add ."
-alias gcom="git commit -m"
-alias gp="git push"
-alias gpuom="git push -u origin main"
-alias gpuod="git push -u origin dev"
+# Function to add alias if it doesn't already exist
+add_alias() {
+  local alias_line="$1"
+  if ! grep -Fxq "$alias_line" "$RC_FILE"; then
+    echo "$alias_line" >> "$RC_FILE"
+    echo "Added: $alias_line"
+  else
+    echo "Already exists: $alias_line"
+  fi
+}
 
-# Habitual job
-alias gs="git status"
-alias gl="git log --oneline --graph --decorate"
-alias gco="git checkout"
-alias gcb="git checkout -b"
-alias gd="git diff"
+echo "Adding aliases to $RC_FILE..."
+echo "github aliases"
+add_alias 'alias gc="git clone"'
+add_alias 'alias ga="git add ."'
+add_alias 'alias gcom="git commit -m"'
+add_alias 'alias gp="git push"'
+add_alias 'alias gpuom="git push -u origin main"'
+add_alias 'alias gpuod="git push -u origin dev"'
+echo "Habitual job"
+add_alias 'alias gs="git status"'
+add_alias 'alias gl="git log --online --graph --decorate"'
+add_alias 'alias gco="git checkout"'
+add_alias 'alias gcb="git checkout -b"'
+add_alias 'alias gd="git diff"'
+echo "pull and fecth"
+add_alias 'alias gpl="git pull"'
+add_alias 'alias gf="git fetch"'
 
-# Pull and fetch
-alias gpl="git pull"
-alias gf="git fetch"
-# ---- End of Custom Git Aliases ----
-EOF
-)
-
-# Add block only if not already present
-if ! grep -q "Custom Git Aliases" "$RC_FILE"; then
-  echo "" >> "$RC_FILE"
-  echo "$ALIASES_BLOCK" >> "$RC_FILE"
-  echo "Git aliases added to $RC_FILE"
+# Reload only if Bash; otherwise, notify user
+if [[ $RC_FILE == "$HOME/.bashrc" ]]; then
+  echo "Reloading $RC_FILE..."
+  source "$RC_FILE"
+  echo "Aliases updated for Bash."
 else
-  echo "Git aliases already present in $RC_FILE"
+  echo "Aliases added for Zsh."
+  echo "To apply the changes, open a new terminal or run 'zsh'."
 fi
-
-# Reload shell config
-echo "Reloading $RC_FILE..."
-source "$RC_FILE" && echo "Aliases applied successfully."

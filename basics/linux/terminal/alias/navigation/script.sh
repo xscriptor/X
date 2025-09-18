@@ -1,44 +1,46 @@
 #!/bin/bash
-# Add common navigation aliases to Bash or Zsh
+# navigation alias
 
-# Detect current shell
-current_shell=$(basename "$0")
-
-if [[ $current_shell == *zsh* ]]; then
+# Detect shell
+if [[ $SHELL == */zsh ]]; then
   RC_FILE="$HOME/.zshrc"
-elif [[ $current_shell == *bash* ]]; then
+elif [[ $SHELL == */bash ]]; then
   RC_FILE="$HOME/.bashrc"
 else
-  echo "Unsupported shell: $current_shell"
+  echo "Unsupported shell: $SHELL"
   echo "This script only supports Bash or Zsh."
   exit 1
 fi
 
+add_alias() {
+  local alias_line="$1"
+  if ! grep -Fxq "$alias_line" "$RC_FILE"; then
+    echo "$alias_line" >> "$RC_FILE"
+    echo "Added: $alias_line"
+  else
+    echo "Already exists: $alias_line"
+  fi
+}
 
-# Aliases block
-ALIASES_BLOCK=$(cat <<'EOF'
-# ---- Custom Navigation Aliases ----
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias ~="cd ~"
-alias c="clear"
-alias ll="ls -lh"
-alias la="ls -A"
-alias l="ls -CF"
-# ---- End of Custom Aliases ----
-EOF
-)
 
-# Add block only if not already present
-if ! grep -q "Custom Navigation Aliases" "$RC_FILE"; then
-  echo "" >> "$RC_FILE"
-  echo "$ALIASES_BLOCK" >> "$RC_FILE"
-  echo "Navigation aliases added to $RC_FILE"
+echo "Adding aliases to $RC_FILE..."
+echo "navigation aliases"
+add_alias 'alias ..="cd .."'
+add_alias 'alias ...="cd ../.."'
+add_alias 'alias ....="cd ../../.."'
+add_alias 'alias ~="cd ~"'
+add_alias 'alias c="clear"'
+add_alias 'alias ll="ls -lh"'
+add_alias 'alias la="ls -A"'
+add_alias 'alias l="ls -CF"'
+
+
+# Reload only if Bash; otherwise, notify user
+if [[ $RC_FILE == "$HOME/.bashrc" ]]; then
+  echo "Reloading $RC_FILE..."
+  source "$RC_FILE"
+  echo "Aliases updated for Bash."
 else
-  echo "Navigation aliases already present in $RC_FILE"
+  echo "Aliases added for Zsh."
+  echo "To apply the changes, open a new terminal or run 'zsh'."
 fi
-
-# Reload shell config
-echo "Reloading $RC_FILE..."
-source "$RC_FILE" && echo "Aliases applied successfully."
