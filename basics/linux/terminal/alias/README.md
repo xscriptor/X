@@ -9,7 +9,7 @@
 
 1. [Github Alias](./github/script.sh)
 <details>
-<summary>Aliases list</summary>
+<summary>Github Aliases list</summary>
 
 ```bash
 #Base
@@ -28,6 +28,23 @@
  #Pull & fetch
  alias gpl="git pull"
  alias gf="git fetch"
+```
+
+</details>
+
+1. [Github Alias](./navigation/script.sh)
+<details>
+<summary>Navigation Aliases list</summary>
+
+```bash
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias c="clear"
+alias ll="ls -lh"
+alias la="ls -A"
+alias l="ls -CF"
 ```
 
 </details>

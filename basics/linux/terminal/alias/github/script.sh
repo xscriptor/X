@@ -24,7 +24,7 @@ add_alias() {
 }
 
 echo "Adding aliases to $RC_FILE..."
-echo "general aliases"
+echo "github aliases"
 add_alias 'alias gc="git clone"'
 add_alias 'alias ga="git add ."'
 add_alias 'alias gcom="git commit -m"'
