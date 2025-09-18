@@ -112,7 +112,7 @@ A comprehensive collection of 10 carefully crafted themes for Visual Studio Code
 
 ### Method 1: From Terminal
 ```bash
-code --install-extension xscriptor-themes-0.0.8.vsix
+code --install-extension xscriptor-themes-0.0.9.vsix
 ```
 
 ### Method 2: Manual Installation
@@ -152,7 +152,6 @@ code --install-extension xscriptor-themes-0.0.8.vsix
    - X Old Tropical Neon
    - X Nord
    - X Greyscale
-   - X Summer Day
    - X Nord Inverted
    - X Greyscale Inverted
    - X Tropical Neon Inverted
