@@ -2,17 +2,18 @@
 # Add common navigation aliases to Bash or Zsh
 
 # Detect current shell
-current_shell=$(ps -p $$ -o comm=)
+current_shell=$(basename "$0")
 
-if [[ $current_shell == "zsh" ]]; then
+if [[ $current_shell == *zsh* ]]; then
   RC_FILE="$HOME/.zshrc"
-elif [[ $current_shell == "bash" ]]; then
+elif [[ $current_shell == *bash* ]]; then
   RC_FILE="$HOME/.bashrc"
 else
   echo "Unsupported shell: $current_shell"
   echo "This script only supports Bash or Zsh."
   exit 1
 fi
+
 
 # Aliases block
 ALIASES_BLOCK=$(cat <<'EOF'
