@@ -80,7 +80,7 @@
 		"editorBracketHighlight.foreground3": "#b8860b",
 		"editorBracketHighlight.foreground4": "#009933",
 		"editorBracketHighlight.foreground5": "#0099cc",
-		"editorBracketHighlight.foreground6": "#6633cc",
+		"editorBracketHighlight.foreground6":  "#6633cc",
 		"editorBracketMatch.background": "#dddddd",
 		"editorBracketMatch.border": "#69676c",
 		"editorCodeLens.foreground": "#69676c",

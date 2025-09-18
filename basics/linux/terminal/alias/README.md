@@ -32,7 +32,7 @@
 
 </details>
 
-1. [Github Alias](./navigation/script.sh)
+1. [Navigation Alias](./navigation/script.sh)
 <details>
 <summary>Navigation Aliases list</summary>
 

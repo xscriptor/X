@@ -3,6 +3,10 @@
 All important modifications to this VSCode theme collection will be documented in this file.
 
 ---
+## [0.0.9] - 2025-09-18
+- Update icons: adding persistence in folders.
+- X Plain Text removed, Xgreyscale takes its place.
+
 ## [0.0.8] - 2025-09-16
 - Update: X Summer Night Is the new Xscriptor Theme without cursive, cursive font added to Xscriptor Theme.
 
