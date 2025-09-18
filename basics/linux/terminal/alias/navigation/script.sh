@@ -1,7 +1,7 @@
 #!/bin/bash
-# navigation alias
+# Add custom aliases to Bash or Zsh
 
-# Detect shell
+# Detect current shell config file
 if [[ $SHELL == */zsh ]]; then
   RC_FILE="$HOME/.zshrc"
 elif [[ $SHELL == */bash ]]; then
@@ -12,35 +12,41 @@ else
   exit 1
 fi
 
-add_alias() {
-  local alias_line="$1"
-  if ! grep -Fxq "$alias_line" "$RC_FILE"; then
-    echo "$alias_line" >> "$RC_FILE"
-    echo "Added: $alias_line"
+# Function to append a block if not already present
+add_block() {
+  local marker="$1"
+  local block="$2"
+
+  if ! grep -q "$marker" "$RC_FILE"; then
+    echo "" >> "$RC_FILE"
+    echo "$block" >> "$RC_FILE"
+    echo "Added block: $marker"
   else
-    echo "Already exists: $alias_line"
+    echo "Block already exists: $marker"
   fi
 }
 
+# --- Navigation Aliases ---
+NAVIGATION_ALIASES=$(cat <<'EOF'
+# ===== Custom Navigation Aliases =====
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias c="clear"
+alias ll="ls -lh"
+alias la="ls -A"
+alias l="ls -CF"
+# ===== End Navigation Aliases =====
+EOF
+)
 
-echo "Adding aliases to $RC_FILE..."
-echo "navigation aliases"
-add_alias 'alias ..="cd .."'
-add_alias 'alias ...="cd ../.."'
-add_alias 'alias ....="cd ../../.."'
-add_alias 'alias ~="cd ~"'
-add_alias 'alias c="clear"'
-add_alias 'alias ll="ls -lh"'
-add_alias 'alias la="ls -A"'
-add_alias 'alias l="ls -CF"'
+# Add blocks
+add_block "Custom Navigation Aliases" "$NAVIGATION_ALIASES"
+add_block "Custom Git Aliases" "$GIT_ALIASES"
+add_block "Custom Package Aliases" "$PKG_ALIASES"
 
-
-# Reload only if Bash; otherwise, notify user
-if [[ $RC_FILE == "$HOME/.bashrc" ]]; then
-  echo "Reloading $RC_FILE..."
-  source "$RC_FILE"
-  echo "Aliases updated for Bash."
-else
-  echo "Aliases added for Zsh."
-  echo "To apply the changes, open a new terminal or run 'zsh'."
-fi
+# Reload config
+echo "Reloading $RC_FILE..."
+# shellcheck source=/dev/null
+source "$RC_FILE" && echo "Aliases applied successfully."
