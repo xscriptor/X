@@ -2,20 +2,69 @@
 
 set -e
 
-echo "Updating system and installing base packages..."
-sudo apt update
-sudo apt install -y \
-  gnome-shell-extensions \
-  gnome-shell-extension-prefs \
-  chrome-gnome-shell \
-  curl \
-  jq \
-  unzip \
-  gnome-tweaks \
-  dconf-editor \
-  flatpak \
-  git \
-  make
+# Detectar gestor de paquetes
+if command -v apt >/dev/null 2>&1; then
+    PKG_MANAGER="apt"
+    UPDATE_CMD="sudo apt update"
+    INSTALL_CMD="sudo apt install -y"
+    BASE_PACKAGES=(
+        gnome-shell-extensions
+        gnome-shell-extension-prefs
+        chrome-gnome-shell
+        curl
+        jq
+        unzip
+        gnome-tweaks
+        dconf-editor
+        flatpak
+        git
+        make
+    )
+elif command -v pacman >/dev/null 2>&1; then
+    PKG_MANAGER="pacman"
+    UPDATE_CMD="sudo pacman -Syu --noconfirm"
+    INSTALL_CMD="sudo pacman -S --noconfirm"
+    BASE_PACKAGES=(
+        gnome-shell-extensions
+        gnome-shell-extension-apps
+        chrome-gnome-shell
+        curl
+        jq
+        unzip
+        gnome-tweaks
+        dconf-editor
+        flatpak
+        git
+        make
+    )
+elif command -v dnf >/dev/null 2>&1; then
+    PKG_MANAGER="dnf"
+    UPDATE_CMD="sudo dnf check-update || true"
+    INSTALL_CMD="sudo dnf install -y"
+    BASE_PACKAGES=(
+        gnome-extensions-app
+        chrome-gnome-shell
+        curl
+        jq
+        unzip
+        gnome-tweaks
+        dconf-editor
+        flatpak
+        git
+        make
+    )
+else
+    echo "No compatible package manager found (apt, pacman, dnf)."
+    exit 1
+fi
+
+echo "Using $PKG_MANAGER as package manager"
+
+echo "Updating system..."
+eval "$UPDATE_CMD"
+
+echo "Installing base packages..."
+$INSTALL_CMD "${BASE_PACKAGES[@]}"
 
 echo "Adding Flathub repository if not already added..."
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

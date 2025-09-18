@@ -30,6 +30,6 @@ This section of the repository concentrates on aspects of customization for Term
 ---
 
 - Only *Windows*:
-    - Powershell:
+    - **Powershell**:
         - [Xtropicalneon](./powershell/xtropicalneon/README.md)
 
