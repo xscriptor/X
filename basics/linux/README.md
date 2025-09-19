@@ -7,7 +7,7 @@ A collection of scripts and configurations to automate the setup of a Linux desk
 - Terminal: 
     - [Alias](./terminal/alias/README.md)
     - [Installations](./terminal/installations/README.md)
-    - [scripts](./terminal/scripts/Readme)
+    - [scripts](./terminal/scripts/Readme.md)
 
 ## Tested on (based on package manager):
 - EndeavourOS
