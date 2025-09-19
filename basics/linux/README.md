@@ -2,6 +2,10 @@
 
 A collection of scripts and configurations to automate the setup of a Linux desktop environment.
 
+- Desktop:
+    - [Gnome](./desktop/gnome/README.md)
+- Terminal
+
 ## Tested on (based on package manager):
 - EndeavourOS
 - Arch Linux
