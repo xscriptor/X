@@ -4,7 +4,10 @@ A collection of scripts and configurations to automate the setup of a Linux desk
 
 - Desktop:
     - [Gnome](./desktop/gnome/README.md)
-- Terminal
+- Terminal: 
+    - [Alias](./terminal/alias/README.md)
+    - [Installations](./terminal/installations/README.md)
+    - [scripts](./terminal/scripts/Readme)
 
 ## Tested on (based on package manager):
 - EndeavourOS
