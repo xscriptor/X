@@ -17,6 +17,14 @@ elif command -v pacman &> /dev/null; then
     echo "Installation complete."
     echo "To run just use btop and nvtop from terminal."
 
+    elif command -v dnf &> /dev/null; then
+    echo "dnf updating"
+    sudo pacman -Syu
+    echo "Installing monirotization tools..."
+    sudo dnf install -y btop nvtop nethogs
+    echo "Installation complete."
+    echo "To run just use btop and nvtop from terminal."
+
 else
-    echo "The sistem dosnt support pacman or apt..."
+    echo "The sistem dosnt support pacman, apt or dnf..."
 fi

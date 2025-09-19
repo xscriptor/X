@@ -1,8 +1,4 @@
 # Xtropicalneon for Powershell
-
-## Preview:
-
-![Demostration](./preview.png)
 ---
 
 ## Instructions:
