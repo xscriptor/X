@@ -3,13 +3,13 @@
 ## Definitions to increase the productivity
 
 *   Note:
-    * To install, clone `chmod +x scriptname.sh` and run `./scriptname` or just copy on the terminal or use what you want to use.
+    * To install, clone `chmod +x script.sh` and run `./script` or just copy on the terminal or use what you want to use.
 
-    * Tested only on Bash and Zsh.
+    * For Bash and Zsh.
 
-1. [Github Alias](./githubalias.sh)
+1. [Github Alias](./github/script.sh)
 <details>
-<summary>Aliases list</summary>
+<summary>Github Aliases list</summary>
 
 ```bash
 #Base
@@ -28,6 +28,23 @@
  #Pull & fetch
  alias gpl="git pull"
  alias gf="git fetch"
+```
+
+</details>
+
+1. [Navigation Alias](./navigation/script.sh)
+<details>
+<summary>Navigation Aliases list</summary>
+
+```bash
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias c="clear"
+alias ll="ls -lh"
+alias la="ls -A"
+alias l="ls -CF"
 ```
 
 </details>

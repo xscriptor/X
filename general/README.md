@@ -6,6 +6,8 @@ This section of the repository concentrates on aspects of customization for appl
 
 **Current Content:**
 
+- **JetBrains**:
+    - [Xscriptor Theme](./Jetbrains/xscriptor-theme/README.md)
 
 - **Obsidian**:
     - [Xscriptor Theme](./obsidian/themes/xscriptor-theme/README.md)

@@ -161,14 +161,14 @@ echo "Done. You can manage your extensions via 'Extension Manager' or 'gnome-ext
 
 * 2. You can download the script:
 
-[basic-desktop-instalation.sh](./bdesktopi.sh)
+[basic-desktop-instalation.sh](./script.sh)
 
 and run:
 
 ```bash
 
-chmod +x bdesktopi.sh
-./bdesktopi.sh
+chmod +x script.sh
+./script.sh
 
 ```
 

@@ -1,6 +1,6 @@
 # X Themes Collection — Visual Studio Code Theme Pack
 
-A comprehensive collection of 11 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
+A comprehensive collection of 10 carefully crafted themes for Visual Studio Code, designed to enhance your coding experience with diverse color palettes and visual styles. From minimalist dark themes to vibrant neon aesthetics, this pack offers something for every developer's preference.
 
 ## Preview
 <p align="center">
@@ -62,12 +62,6 @@ A comprehensive collection of 11 carefully crafted themes for Visual Studio Code
 - **Highlights:** Soft pink (#FF9AA2), light green (#B8E6A0), light yellow (#FFE4A3), cyan (#8BE9FD), purple (#BD93F9)
 - **Perfect for:** Long coding sessions with reduced eye strain
 
-**X Plain Text** — *Ultra-minimalist monochrome*
-- **Type:** Dark
-- **Background:** Pure black (#000000)
-- **Highlights:** Golden yellow (#FFD700) accents on pure white text
-- **Perfect for:** Distraction-free reading documentation coding and text editing
-
 **X Tropical Neon** — *Vibrant cyberpunk aesthetics*
 - **Type:** Dark
 - **Background:** Dark gray (#1A1A1A)
@@ -118,7 +112,7 @@ A comprehensive collection of 11 carefully crafted themes for Visual Studio Code
 
 ### Method 1: From Terminal
 ```bash
-code --install-extension xscriptor-themes-0.0.8.vsix
+code --install-extension xscriptor-themes-0.0.9.vsix
 ```
 
 ### Method 2: Manual Installation
@@ -137,7 +131,7 @@ code --install-extension xscriptor-themes-0.0.8.vsix
 
 ## Features
 
-- **11 Unique Themes** — Diverse collection covering all preferences
+- **1o Unique Themes** — Diverse collection covering all preferences
 - **High Contrast** — Optimized for readability and reduced eye strain
 - **Syntax Highlighting** — Comprehensive token coloring for all major languages
 - **UI Consistency** — Carefully designed interface elements
@@ -152,14 +146,12 @@ code --install-extension xscriptor-themes-0.0.8.vsix
 2. Go to **File > Preferences > Color Theme** (or press `Ctrl+K Ctrl+T`)
 3. Select your preferred theme from the X Themes collection:
    - X Dark Colors
-   - X Plain Text
    - X Tropical Neon
    - Xscriptor Theme
    - X Summer Night
    - X Old Tropical Neon
    - X Nord
    - X Greyscale
-   - X Summer Day
    - X Nord Inverted
    - X Greyscale Inverted
    - X Tropical Neon Inverted
@@ -191,7 +183,3 @@ This theme collection is released under the MIT License. See [LICENSE](./LICENSE
 
 - GitHub: [@xscriptorcode](https://github.com/xscriptorcode)
 - Repository: [X Themes Collection](https://github.com/xscriptorcode/X/tree/main/general/vscode/themes/xscriptor-themes)
-
----
-
-*Enhance your coding experience with the X Themes Collection — where functionality meets aesthetics.*
