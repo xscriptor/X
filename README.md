@@ -1,6 +1,8 @@
 
 # X
 
+## **Notice:** This repository will soon be moved to [Xscriptor](https://xscriptor.com/xscriptordev) as part of the brand consolidation.
+
 ### *Repository for system customizations and automation*.
 
 <p align="center">
