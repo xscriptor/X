@@ -75,5 +75,5 @@ MIT License - Feel free to modify and distribute
 
 ---
 
-**Created by Xscriptor** | [Report Issues](https://github.com/xscriptorcode/X/issues)
-**To download from the source** | [View on GitHub](https://github.com/xscriptorcode/X/tree/main/general/obsidian/themes/xscriptor-theme)
+**Created by Xscriptor** | [Report Issues](https://github.com/xscriptordev/obsidian/issues)
+**To download from the source** | [View on GitHub](https://github.com/xscriptordev/obsidian/)
