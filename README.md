@@ -1,7 +1,7 @@
 
 # X
 
-## **Notice:** This repository will soon be moved to [Xscriptor](https://github.com/xscriptordev/vscode) as part of the brand consolidation.
+## **Notice:** This repository will soon be moved to [Xscriptordev](https://github.com/xscriptordev/) as part of the brand consolidation.
 
 ### *Repository for system customizations and automation*.
 
@@ -24,7 +24,7 @@
 
 <summary>Tree</summary>
 
-```bash
+```tsx
 X
 ├── basics
 │   ├── linux
@@ -45,21 +45,6 @@ X
 │       ├── postinstallation
 │       ├── taskbarcustomization
 │       │   └── xw11-taskbar
-│       │       ├── screenshots
-│       │       ├── xblackgold
-│       │       │   └── files
-│       │       ├── xdark
-│       │       │   └── files
-│       │       ├── xdeepocean
-│       │       │   └── files
-│       │       ├── xgold
-│       │       │   └── files
-│       │       ├── xgrapepurple
-│       │       │   └── files
-│       │       ├── xicegray
-│       │       │   └── files
-│       │       └── xtranslucid
-│       │           └── files
 │       └── yasb
 │           ├── config
 │           └── preview
@@ -80,39 +65,6 @@ X
 │   │   └── xfetch
 │   │       ├── preview
 │   │       └── src
-│   ├── obsidian
-│   │   └── themes
-│   │       └── xscriptor-theme
-│   │           ├── download
-│   │           └── fonts
-│   ├── terminal
-│   │   ├── gnome
-│   │   │   ├── xscriptor-theme
-│   │   │   └── xtropicalneon
-│   │   ├── kitty
-│   │   │   ├── xdracula
-│   │   │   ├── xscriptor-theme
-│   │   │   └── xtropicalneon
-│   │   ├── konsole
-│   │   ├── powershell
-│   │   │   ├── previews
-│   │   │   ├── xscriptor-theme
-│   │   │   └── xtropicalneon
-│   │   └── xfce
-│   └── vscode
-│       ├── themes
-│       │   └── xscriptor-themes
-│       │       ├── files-before-rename
-│       │       ├── icons
-│       │       │   ├── x-greyscale-icons
-│       │       │   ├── x-icons
-│       │       │   ├── xscriptor-greyscale-icons
-│       │       │   └── xscriptor-icons
-│       │       ├── image
-│       │       ├── screenshots
-│       │       └── themes
-│       └── ui-mods
-│           └── styles
 ├── images
 │   ├── arch
 │   ├── byn
