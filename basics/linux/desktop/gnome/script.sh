@@ -75,7 +75,7 @@ flatpak install -y flathub com.mattjakeman.ExtensionManager
 EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
 mkdir -p "$EXTENSIONS_DIR"
 
-# Special case: Dash to Dock from GitHub
+# Special case: Dash to Dock GitHub
 install_dash_to_dock() {
   echo "Installing Dash to Dock from GitHub..."
   rm -rf "$EXTENSIONS_DIR/dash-to-dock@micxgx.gmail.com"
