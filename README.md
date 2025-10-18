@@ -1,9 +1,9 @@
 
 # X
 
-## **Notice:** This repository will soon be moved to [Xscriptordev](https://github.com/xscriptordev/) as part of the brand consolidation.
+## **Notice:** This repository is connected to the [Xscriptor-dev](https://github.com/xscriptordev/) repositories, to the brand consolidation.
 
-### *Repository for system customizations and automation*.
+### *Experimental space for system customizations and automation*.
 
 <p align="center">
   <img src="./screenshots/preview.png" alt="Demostración" width="800"/>
