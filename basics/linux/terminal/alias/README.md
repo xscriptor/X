@@ -4,7 +4,6 @@
 
 *   Note:
     * To install, clone `chmod +x script.sh` and run `./script` or just copy on the terminal or use what you want to use.
-
     * For Bash and Zsh.
 
 1. [Github Alias](./github/script.sh)
