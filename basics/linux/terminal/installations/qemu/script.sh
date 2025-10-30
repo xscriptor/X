@@ -1,70 +1,27 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-set -e
+echo "[XOs] Installing QEMU + libvirt + virt-manager stack…"
 
-# Detect package manager
-if command -v pacman &>/dev/null; then
-    PKG="pacman"
-elif command -v apt &>/dev/null; then
-    PKG="apt"
-elif command -v dnf &>/dev/null; then
-    PKG="dnf"
-else
-    echo "No compatible package manager found (dnf, apt, pacman)"
-    exit 1
-fi
+sudo pacman -Syu --needed \
+  qemu-full libvirt virt-manager virt-viewer edk2-ovmf dnsmasq swtpm guestfs-tools libosinfo \
+  bridge-utils vde2 openbsd-netcat ebtables iptables-nft
 
-echo "Using package manager: $PKG"
-
-# Update & install depending on package manager
-if [ "$PKG" = "pacman" ]; then
-    sudo pacman -Syu --noconfirm
-    sudo pacman -S --needed --noconfirm \
-        qemu \
-        virt-manager \
-        virt-viewer \
-        dnsmasq \
-        vde2 \
-        bridge-utils \
-        openbsd-netcat \
-        libvirt \
-        edk2-ovmf \
-        iptables-nft
-
-elif [ "$PKG" = "apt" ]; then
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install -y \
-        qemu-kvm \
-        virt-manager \
-        virt-viewer \
-        dnsmasq \
-        bridge-utils \
-        libvirt-daemon-system \
-        libvirt-clients \
-        ovmf \
-        iptables
-
-elif [ "$PKG" = "dnf" ]; then
-    sudo dnf upgrade -y
-    sudo dnf install -y \
-        @virtualization \
-        qemu-kvm \
-        virt-manager \
-        virt-viewer \
-        dnsmasq \
-        bridge-utils \
-        libvirt \
-        edk2-ovmf \
-        iptables
-fi
-
-# Enable and start libvirtd service
+echo "[XOs] Enabling services..."
 sudo systemctl enable --now libvirtd.service
+sudo systemctl enable --now virtlogd.socket virtlockd.socket
 
-# Add user to the libvirt group
-sudo usermod -aG libvirt $USER
+echo "[XOs] Adding user to libvirt/kvm groups..."
+sudo usermod -aG libvirt,kvm "$(whoami)"
 
-# Verify the status of the service
-systemctl status libvirtd.service
+echo "[XOs] Restarting libvirt service..."
+sudo systemctl restart libvirtd.service
 
-echo "Finished. Restart to apply..."
+echo "[XOs] Defining and starting default network..."
+sudo virsh net-define /usr/share/libvirt/networks/default.xml 2>/dev/null || true
+sudo virsh net-autostart default || true
+sudo virsh net-start default || true
+
+echo "[XOs] Virtualization stack installed."
+echo "[XOs] Please log out or reboot to apply group changes."
+echo "[XOs] After reboot, run virt-manager to start using QEMU/KVM."
