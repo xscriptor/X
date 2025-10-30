@@ -3,6 +3,8 @@
 
 ## **Notice:** This repository is connected to the [Xscriptor-dev](https://github.com/xscriptordev/) repositories, to the brand consolidation.
 
+## Note: *Methods to install software for apt based ditros will move to another folder, the /terminal/installations/ will concentrate XOs scripts/arch based scripts*
+
 ### *Experimental space for system customizations and automation*.
 
 <p align="center">
