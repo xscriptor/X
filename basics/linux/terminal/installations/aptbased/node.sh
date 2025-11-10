@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Installing Next.js + TypeScript environment on Ubuntu (WSL)..."
+
+# --- System update ---
+sudo apt update -y && sudo apt upgrade -y
+
+# --- Base dependencies ---
+sudo apt install -y git curl wget build-essential ca-certificates gnupg lsb-release
+
+# --- Install NVM (Node Version Manager) ---
+if [ ! -d "$HOME/.nvm" ]; then
+  echo "Installing NVM..."
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+fi
+
+# --- Load NVM into the current shell session ---
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# --- Install Node.js (latest LTS) ---
+echo "Installing Node.js LTS..."
+nvm install --lts
+nvm use --lts
+
+# --- Check versions ---
+node -v
+npm -v
+
+# --- Update npm to the latest version ---
+echo "Updating npm..."
+npm install -g npm@latest
+
+# --- Install TypeScript globally ---
+echo "Installing TypeScript..."
+npm install -g typescript ts-node @types/node
+
+# --- Install common web dev tools ---
+npm install -g yarn pnpm eslint prettier
+
+# --- Create a new Next.js project (optional) ---
+read -p "Do you want to create a new Next.js project? (y/n): " create
+if [[ "$create" =~ ^[Yy]$ ]]; then
+  read -p "Project name: " name
+  npx create-next-app@latest "$name" --typescript
+  echo "Project '$name' created successfully."
+fi
+
+echo "Installation completed."
+echo "Open your project with:"
+echo "  cd <project-name>"
+echo "  npm run dev"
