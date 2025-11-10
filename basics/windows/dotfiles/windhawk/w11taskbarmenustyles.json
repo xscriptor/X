@@ -71,5 +71,13 @@
   "controlStyles[21].styles[0]": "Background:=<SolidColorBrush Color=\"{ThemeResource SystemChromeMediumLowColor}\" Opacity=\"1\"/>",
   "controlStyles[21].styles[1]": "Padding=10,6",
   "controlStyles[21].styles[2]": "Margin=0,0,-35,0",
-  "controlStyles[21].styles[3]": "CornerRadius=15"
+  "controlStyles[21].styles[3]": "CornerRadius=15",
+  "theme": "",
+  "disableNewStartMenuLayout": 0,
+  "webContentStyles[0].target": "",
+  "webContentStyles[0].styles[0]": "",
+  "webContentCustomJs": "",
+  "styleConstants[0]": "",
+  "resourceVariables[0].variableKey": "",
+  "resourceVariables[0].value": ""
 }
