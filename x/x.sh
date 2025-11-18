@@ -69,6 +69,39 @@ else
   echo 'plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions zsh-autocomplete)' >> "$ZSHRC"
 fi
 
+GIT_ALIASES=$(cat <<'EOF'
+# ===== XCustom Git Aliases =====
+alias gc="git clone"
+alias ga="git add ."
+alias gcom="git commit -m"
+alias gp="git push"
+alias gpuom="git push -u origin main"
+alias gpuod="git push -u origin dev"
+alias gs="git status"
+alias gl="git log --oneline --graph --decorate"
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gd="git diff"
+alias gpl="git pull"
+alias gf="git fetch"
+# ===== End =====
+EOF
+)
+
+NAVIGATION_ALIASES=$(cat <<'EOF'
+# ===== XCustom Navigation Aliases =====
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias c="clear"
+alias ll="ls -lh"
+alias la="ls -A"
+alias l="ls -CF"
+# ===== End =====
+EOF
+)
+
 # Detect shell rc file
 RCFILE=""
 case "$(basename "$SHELL")" in
@@ -88,16 +121,48 @@ else
   echo "[!] Unsupported shell. Add manually."
 fi
 
-# Add globally if possible
-if [[ -w /etc/bash.bashrc ]]; then
+if [[ -n "$RCFILE" ]]; then
+  if ! grep -q "XCustom Git Aliases" "$RCFILE" 2>/dev/null; then
+    echo "$GIT_ALIASES" >> "$RCFILE"
+  fi
+  if ! grep -q "XCustom Navigation Aliases" "$RCFILE" 2>/dev/null; then
+    echo "$NAVIGATION_ALIASES" >> "$RCFILE"
+  fi
+fi
+
+if [[ -f /etc/bash.bashrc ]]; then
   if ! grep -q "alias x='sudo'" /etc/bash.bashrc 2>/dev/null; then
     echo "$ALIASES" | x tee -a /etc/bash.bashrc >/dev/null
-    echo "[+] Global aliases added to /etc/bash.bashrc"
+  fi
+  if ! grep -q "XCustom Git Aliases" /etc/bash.bashrc 2>/dev/null; then
+    echo "$GIT_ALIASES" | x tee -a /etc/bash.bashrc >/dev/null
+  fi
+  if ! grep -q "XCustom Navigation Aliases" /etc/bash.bashrc 2>/dev/null; then
+    echo "$NAVIGATION_ALIASES" | x tee -a /etc/bash.bashrc >/dev/null
+  fi
+fi
+
+if [[ -f /etc/zsh/zshrc ]]; then
+  if ! grep -q "alias x='sudo'" /etc/zsh/zshrc 2>/dev/null; then
+    echo "$ALIASES" | x tee -a /etc/zsh/zshrc >/dev/null
+  fi
+  if ! grep -q "XCustom Git Aliases" /etc/zsh/zshrc 2>/dev/null; then
+    echo "$GIT_ALIASES" | x tee -a /etc/zsh/zshrc >/dev/null
+  fi
+  if ! grep -q "XCustom Navigation Aliases" /etc/zsh/zshrc 2>/dev/null; then
+    echo "$NAVIGATION_ALIASES" | x tee -a /etc/zsh/zshrc >/dev/null
   fi
 fi
 
 if ! grep -q "alias x='sudo'" "$HOME/.zshrc" 2>/dev/null; then
   echo "$ALIASES" >> "$HOME/.zshrc"
+fi
+
+if ! grep -q "XCustom Git Aliases" "$HOME/.zshrc" 2>/dev/null; then
+  echo "$GIT_ALIASES" >> "$HOME/.zshrc"
+fi
+if ! grep -q "XCustom Navigation Aliases" "$HOME/.zshrc" 2>/dev/null; then
+  echo "$NAVIGATION_ALIASES" >> "$HOME/.zshrc"
 fi
 
 echo " Done. Reload your shell:"
