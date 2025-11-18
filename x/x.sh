@@ -15,6 +15,7 @@ alias x='sudo'
 alias xs='sudo su'
 alias xi='sudo -i'
 alias xsh='sudo -s'
+alias xzdev='zellij --layout x'
 "
 
 shopt -s expand_aliases
@@ -22,6 +23,7 @@ alias x='sudo'
 alias xs='sudo su'
 alias xi='sudo -i'
 alias xsh='sudo -s'
+alias xzdev='zellij --layout x'
 
 if ! command -v zsh &>/dev/null; then
   if command -v pacman &>/dev/null; then
