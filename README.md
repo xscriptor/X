@@ -30,6 +30,7 @@
 
 ```tsx
 X
+x-> scripts related to xos 
 ├── basics
 │   ├── linux
 │   │   ├── desktop
@@ -53,30 +54,28 @@ X
 │           ├── config
 │           └── preview
 ├── general
-│   ├── Jetbrains
-│   │   └── xscriptor-theme
-│   │       ├── download
-│   │       ├── gradle
-│   │       │   └── wrapper
-│   │       ├── preview
-│   │       └── src
-│   │           └── main
-│   │               └── resources
-│   │                   ├── META-INF
-│   │                   ├── colors
-│   │                   └── themes
-│   ├── custom-tools
-│   │   └── xfetch
-│   │       ├── preview
-│   │       └── src
-├── images
-│   ├── arch
-│   ├── byn
-│   ├── color
-│   ├── kali
-│   └── mod
-└── screenshots
+   ├── Jetbrains
+   │   └── xscriptor-theme
+   │       ├── download
+   │       ├── gradle
+   │       │   └── wrapper
+   │       ├── preview
+   │       └── src
+   │           └── main
+   │               └── resources
+   │                   ├── META-INF
+   │                   ├── colors
+   │                   └── themes
+   ├── custom-tools
+      └── xfetch
+          ├── preview
+          └── src
 
 ```
-
 </details>
+
+
+- [Xscriptor](./x/x.sh) *Main script for Xos resume*
+```bash
+curl -sLO https://raw.githubusercontent.com/xscriptor/X/main/x/x.sh && chmod +x x.sh && ./x.sh
+```
