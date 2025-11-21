@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ────────────────────────────────────────────────
-# Xscriptor aliases installer
-# x   → sudo
-# xs  → sudo su          (classic root shell)
-# xi  → sudo -i          (login shell, full root env)
-# xsh → sudo -s          (root shell, keep user env)
-# ────────────────────────────────────────────────
+# X general settings
 
 ALIASES="
 # ───── Xscriptor Aliases ─────
