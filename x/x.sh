@@ -36,6 +36,21 @@ if ! command -v zsh &>/dev/null; then
   fi
 fi
 
+# Install yay only if Arch-based
+if command -v pacman &>/dev/null; then
+  if ! command -v yay &>/dev/null; then
+    echo "[+] Installing yay (AUR helper)..."
+    x pacman -Sy --noconfirm --needed git base-devel
+
+    tmpdir=$(mktemp -d)
+    git clone https://aur.archlinux.org/yay.git "$tmpdir"
+    (cd "$tmpdir" && makepkg -si --noconfirm)
+    rm -rf "$tmpdir"
+  else
+    echo "[=] yay already installed"
+  fi
+fi
+
 if [ "$SHELL" != "$(which zsh)" ] && command -v zsh &>/dev/null; then
   chsh -s "$(which zsh)"
 fi
