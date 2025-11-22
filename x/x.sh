@@ -176,5 +176,11 @@ if ! grep -q "XCustom Navigation Aliases" "$HOME/.zshrc" 2>/dev/null; then
   echo "$NAVIGATION_ALIASES" >> "$HOME/.zshrc"
 fi
 
+if command -v code &>/dev/null; then
+  code --install-extension xscriptor.x-dark-colors || echo "[!] Failed to install xscriptor.x-dark-colors"
+  code --install-extension xscriptor.xscriptor-themes || echo "[!] Failed to install xscriptor.xscriptor-themes"
+  code --install-extension xscriptor.xglass || echo "[!] Failed to install xscriptor.xglass"
+fi
+
 echo " Done. Reload your shell:"
 echo "   source ~/.bashrc  or  source ~/.zshrc"
