@@ -48,7 +48,14 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # ────────────────────────────────────────────────
-# 7. Finish
+# 7. Enable NVIDIA power modes (performance / balanced / powersave)
+# ────────────────────────────────────────────────
+echo "[XOs] Enabling NVIDIA Power Management..."
+sudo systemctl enable --now nvidia-powerd.service
+
+
+# ────────────────────────────────────────────────
+# 8. Finish
 # ────────────────────────────────────────────────
 echo "[XOs] Installation complete. The system will reboot in 5 seconds..."
 sleep 5
