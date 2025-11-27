@@ -1,7 +1,8 @@
 # Installations
 
-## Scripts for multiple purposes:
+## nvm
 
-- *Vms*:
-    - [Qemu](./qemu/script.sh)
-- *[Monitorization](./monitorization/README.md)*
+```bash
+curl -sL https://raw.githubusercontent.com/xscriptordev/x/main/scripts/nvm/script.sh | bash
+
+```
