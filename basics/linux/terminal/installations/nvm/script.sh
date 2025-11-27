@@ -23,17 +23,17 @@ case "$DISTRO" in
   arch)
     echo "Installing base packages for Arch..."
     sudo pacman -Syu --noconfirm
-    sudo pacman -S --needed --noconfirm git curl wget base-devel ca-certificates lsb-release gnupg
+    sudo pacman -S --needed --noconfirm git curl wget base-devel ca-certificates lsb-release gnupg || true
     ;;
   ubuntu)
     echo "Installing base packages for Ubuntu/Debian..."
     sudo apt update -y && sudo apt upgrade -y
-    sudo apt install -y git curl wget build-essential ca-certificates lsb-release gnupg
+    sudo apt install -y git curl wget build-essential ca-certificates lsb-release gnupg || true
     ;;
   fedora)
     echo "Installing base packages for Fedora..."
     sudo dnf upgrade -y
-    sudo dnf install -y git curl wget gcc-c++ make ca-certificates redhat-lsb-core gnupg2
+    sudo dnf install -y git curl wget gcc-c++ make ca-certificates redhat-lsb-core gnupg2 || true
     ;;
 esac
 
