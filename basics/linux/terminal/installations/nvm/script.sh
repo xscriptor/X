@@ -1,53 +1,84 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Installing Next.js + TypeScript environment on Arch Linux..."
+echo "Detecting Linux distribution..."
 
-# --- System update ---
-sudo pacman -Syu --noconfirm
+# --- Detect distro ---
+if command -v pacman >/dev/null 2>&1; then
+    DISTRO="arch"
+elif command -v apt >/dev/null 2>&1; then
+    DISTRO="ubuntu"
+elif command -v dnf >/dev/null 2>&1; then
+    DISTRO="fedora"
+else
+    echo "Unsupported distribution. Exiting."
+    exit 1
+fi
 
-# --- Base dependencies ---
-sudo pacman -S --needed --noconfirm git curl wget base-devel ca-certificates lsb-release gnupg
+echo "Detected distro: $DISTRO"
+echo
 
-# --- Install NVM (Node Version Manager) ---
+# --- Install base dependencies according to distro ---
+case "$DISTRO" in
+  arch)
+    echo "Installing base packages for Arch..."
+    sudo pacman -Syu --noconfirm
+    sudo pacman -S --needed --noconfirm git curl wget base-devel ca-certificates lsb-release gnupg
+    ;;
+  ubuntu)
+    echo "Installing base packages for Ubuntu/Debian..."
+    sudo apt update -y && sudo apt upgrade -y
+    sudo apt install -y git curl wget build-essential ca-certificates lsb-release gnupg
+    ;;
+  fedora)
+    echo "Installing base packages for Fedora..."
+    sudo dnf upgrade -y
+    sudo dnf install -y git curl wget gcc-c++ make ca-certificates redhat-lsb-core gnupg2
+    ;;
+esac
+
+echo
+echo "Base dependencies installed successfully."
+echo
+
+# --- Install NVM ---
 if [ ! -d "$HOME/.nvm" ]; then
   echo "Installing NVM..."
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+else
+  echo "NVM already installed."
 fi
 
-# --- Load NVM into the current shell session ---
+# --- Load NVM ---
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# --- Install Node.js (latest LTS) ---
+echo
 echo "Installing Node.js LTS..."
 nvm install --lts
 nvm use --lts
 
-# --- Check versions ---
+echo
+echo "Node version:"
 node -v
+echo "NPM version:"
 npm -v
 
-# --- Update npm to the latest version ---
+# --- Update npm ---
+echo
 echo "Updating npm..."
 npm install -g npm@latest
 
-# --- Install TypeScript globally ---
-echo "Installing TypeScript..."
+# --- Install TypeScript toolchain ---
+echo
+echo "Installing TypeScript toolchain..."
 npm install -g typescript ts-node @types/node
 
-# --- Install common web dev tools ---
-npm install -g yarn pnpm eslint prettier
+# --- Install yarn + pnpm ---
+echo
+echo "Installing yarn + pnpm..."
+npm install -g yarn pnpm
 
-# --- Create a new Next.js project (optional) ---
-read -p "Do you want to create a new Next.js project? (y/n): " create
-if [[ "$create" =~ ^[Yy]$ ]]; then
-  read -p "Project name: " name
-  npx create-next-app@latest "$name" --typescript
-  echo "Project '$name' created successfully."
-fi
-
-echo "Installation completed."
-echo "Open your project with:"
-echo "  cd <project-name>"
-echo "  npm run dev"
+echo
+echo "Done."
+echo "TypeScript, ts-node, yarn, pnpm are now available globally (NVM global-local)."
