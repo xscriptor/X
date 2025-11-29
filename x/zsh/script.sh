@@ -4,8 +4,11 @@ set -euo pipefail
 # X general settings
 
 # Ensure real x wrapper exists and active
-if [[ ! -x /usr/bin/x ]] || ! grep -q 'exec sudo "\$@"' /usr/bin/x 2>/dev/null; then
-  sudo sh -c 'cat > /usr/bin/x << "EOF"\n#!/usr/bin/env bash\nexec sudo "\$@"\nEOF'
+if [[ ! -x /usr/bin/x ]] || ! grep -q 'exec sudo "$@"' /usr/bin/x 2>/dev/null; then
+  sudo tee /usr/bin/x >/dev/null <<'EOF'
+#!/usr/bin/env bash
+exec sudo "$@"
+EOF
   sudo chmod 755 /usr/bin/x
 fi
 alias x &>/dev/null && unalias x || true
