@@ -3,25 +3,13 @@
 
 ## **Notice:** This repository is connected to the [Xscriptor-dev](https://github.com/xscriptordev/) repositories, to the brand consolidation.
 
-## Note: *Methods to install software for apt based ditros will move to another folder, the /terminal/installations/ will concentrate XOs scripts/arch based scripts*
-
-### *Experimental space for system customizations and automation*.
-
-<p align="center">
-  <img src="./screenshots/preview.png" alt="Demostración" width="800"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/preview2.png" alt="Demostración" width="800"/>
-</p>
+### *Experimental space for system customization development*.
 
 ## Structure:
 
 - [Basics](./basics/readme.md) *Includes post-installation scripts, applications, and documentation of installation things that I regularly use on daily-use systems.*
 - [General](./general/README.md) *Includes specific customizations for application interfaces that I regularly use in my daily-use system.*
-
-## **Notice:** Images was removed you will find this in another repo, linked to XOs.
-- [Images](./images/README.md) *Backgrounds*
+- x Automations to install de X environment on different distributions.
 
 ---
 <details>
@@ -67,15 +55,12 @@ x-> scripts related to xos
    │                   ├── colors
    │                   └── themes
    ├── custom-tools
-      └── xfetch
-          ├── preview
-          └── src
 
 ```
 </details>
 
 
-- [Xscriptor](./x/x.sh) *Main script for Xos resume*
+- [zsh](./x/zsh/script.sh) *XBase for zsh*
 ```bash
-curl -sLO https://raw.githubusercontent.com/xscriptor/X/main/x/x.sh && chmod +x x.sh && ./x.sh
+curl -sLO https://raw.githubusercontent.com/xscriptor/X/main/x/zsh/script.sh && chmod +x script.sh && ./script.sh
 ```
