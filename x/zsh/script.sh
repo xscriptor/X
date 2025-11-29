@@ -24,15 +24,6 @@ alias xi='sudo -i'
 alias xsh='sudo -s'
 alias xzdev='zellij --layout x'
 
-if command -v pacman &>/dev/null; then
-  x pacman -Sy --noconfirm --needed curl git
-elif command -v apt &>/dev/null; then
-  x apt update -y
-  x apt install -y curl git
-elif command -v dnf &>/dev/null; then
-  x dnf install -y curl git
-fi
-
 if ! command -v zsh &>/dev/null; then
   if command -v pacman &>/dev/null; then
     x pacman -Sy --noconfirm zsh
