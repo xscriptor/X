@@ -3,13 +3,33 @@ set -euo pipefail
 
 # X general settings
 
-# Ensure real x wrapper exists and active
-if [[ ! -x /usr/bin/x ]] || ! grep -q 'exec sudo "$@"' /usr/bin/x 2>/dev/null; then
-  sudo tee /usr/bin/x >/dev/null <<'EOF'
+has() { command -v "$1" >/dev/null 2>&1; }
+is_wsl() { grep -qi microsoft /proc/version 2>/dev/null; }
+is_container() { [ -f /.dockerenv ] || (has systemd-detect-virt && systemd-detect-virt --container >/dev/null 2>&1) || grep -qE '(docker|lxc|container)' /proc/1/cgroup 2>/dev/null; }
+
+WRAPPER_CONTENT=$(cat <<'EOF'
 #!/usr/bin/env bash
-exec sudo "$@"
+if [ "$EUID" -eq 0 ]; then exec "$@"; fi
+if command -v sudo >/dev/null 2>&1; then exec sudo "$@"; fi
+if command -v doas >/dev/null 2>&1; then exec doas "$@"; fi
+if command -v su >/dev/null 2>&1; then exec su -c "$*"; fi
+exec "$@"
 EOF
-  sudo chmod 755 /usr/bin/x
+)
+
+ALLOW_SYS=0
+if has sudo && ! is_wsl && ! is_container; then ALLOW_SYS=1; fi
+
+if [ "$ALLOW_SYS" -eq 1 ]; then
+  if ! { echo "$WRAPPER_CONTENT" | sudo tee /usr/bin/x >/dev/null && sudo chmod 755 /usr/bin/x; }; then
+    mkdir -p "$HOME/.local/bin"
+    echo "$WRAPPER_CONTENT" > "$HOME/.local/bin/x"
+    chmod 755 "$HOME/.local/bin/x"
+  fi
+else
+  mkdir -p "$HOME/.local/bin"
+  echo "$WRAPPER_CONTENT" > "$HOME/.local/bin/x"
+  chmod 755 "$HOME/.local/bin/x"
 fi
 alias x &>/dev/null && unalias x || true
 
@@ -29,12 +49,12 @@ alias xzdev='zellij --layout x'
 
 if ! command -v zsh &>/dev/null; then
   if command -v pacman &>/dev/null; then
-    x pacman -Sy --noconfirm zsh
+    x pacman -Sy --noconfirm zsh || true
   elif command -v apt &>/dev/null; then
-    x apt update -y
-    x apt install -y zsh
+    x apt update -y || true
+    x apt install -y zsh || true
   elif command -v dnf &>/dev/null; then
-    x dnf install -y zsh
+    x dnf install -y zsh || true
   fi
 fi
 
@@ -121,6 +141,9 @@ if [[ -n "$RCFILE" ]]; then
   else
     echo "[=] Aliases already exist in $RCFILE"
   fi
+  if ! grep -q "\.local/bin" "$RCFILE" 2>/dev/null; then
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$RCFILE"
+  fi
 else
   echo "[!] Unsupported shell. Add manually."
 fi
@@ -134,7 +157,7 @@ if [[ -n "$RCFILE" ]]; then
   fi
 fi
 
-if [[ -f /etc/bash.bashrc ]]; then
+if [[ -f /etc/bash.bashrc ]] && [[ "$ALLOW_SYS" -eq 1 ]]; then
   if ! grep -q "Xscriptor Aliases" /etc/bash.bashrc 2>/dev/null; then
     echo "$ALIASES" | x tee -a /etc/bash.bashrc >/dev/null
   fi
@@ -146,7 +169,7 @@ if [[ -f /etc/bash.bashrc ]]; then
   fi
 fi
 
-if [[ -f /etc/zsh/zshrc ]]; then
+if [[ -f /etc/zsh/zshrc ]] && [[ "$ALLOW_SYS" -eq 1 ]]; then
   if ! grep -q "Xscriptor Aliases" /etc/zsh/zshrc 2>/dev/null; then
     echo "$ALIASES" | x tee -a /etc/zsh/zshrc >/dev/null
   fi
